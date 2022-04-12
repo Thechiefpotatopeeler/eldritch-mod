@@ -18,5 +18,6 @@ build
 .gradle
 
 # other
+.vscode
 eclipse
 run

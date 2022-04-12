@@ -1,14 +1,14 @@
 [
 {
-  "modid": "template_mod",
-  "name": "Forge Template Mod",
+  "modid": "eldritch_mod",
+  "name": "Eldritch",
   "description": "Example forge mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "Indev 1.0",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Rhyw"],
+  "credits": "Rhyw (owner, dev, and composer), all the contributors on Github, and Fith3r for the bulk of graphic design",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
