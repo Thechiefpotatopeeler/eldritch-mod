@@ -39,6 +39,7 @@ public class Main {
 	@SidedProxy(serverSide = "com.eldritchmod.proxy.CommonProxy", clientSide = "com.eldritchmod.proxy.ClientProxy")
 	public static CommonProxy proxy; 
 	
+	//This adds the creative tabs into the game.
 	public static final CreativeTabs eldritchmodtools = new EldritchTools("eldritchmodtools");
 	public static final CreativeTabs eldritchmodmaterials = new EldritchMaterials("eldritchmodmaterials");
 	
