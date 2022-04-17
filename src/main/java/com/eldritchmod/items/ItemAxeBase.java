@@ -3,9 +3,10 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 import com.eldritchmod.init.ItemsRegistry;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 
-public abstract class ItemAxeBase extends ItemAxe implements IRegisterable {
+public abstract class ItemAxeBase extends ItemAxe implements IRegisterable, ICreativeTabbable {
 
 	protected String name;
 	
@@ -19,6 +20,11 @@ public abstract class ItemAxeBase extends ItemAxe implements IRegisterable {
 	
 	public void registerItemModel() {
 		Main.proxy.registerItemRenderer(this, 0, name);
+	}
+
+	public ItemAxeBase setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
 	}
 
 	@Override

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "B"
+    ],
+    "key": {
+        "B": {
+            "item": "eldritch_mod:eldritch_block"
+        }
+    },
+    "result": {
+        "item": "eldritch_mod:eldritch_shard",
+        "count": 9
+    }
+}

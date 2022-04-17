@@ -55,6 +55,8 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+    repositories { maven { url "https://maven.mcmoddev.com/" } } dependencies { deobfCompile "net.ilexiconn:llibrary:1.7.19-1.12.2" }
+
 }
 
 processResources {

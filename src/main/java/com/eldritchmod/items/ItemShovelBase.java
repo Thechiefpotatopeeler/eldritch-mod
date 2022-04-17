@@ -3,6 +3,7 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 import com.eldritchmod.init.ItemsRegistry;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
 
 public abstract class ItemShovelBase extends ItemSpade implements IRegisterable {
@@ -19,6 +20,11 @@ public abstract class ItemShovelBase extends ItemSpade implements IRegisterable 
 	
 	public void registerItemModel() {
 		Main.proxy.registerItemRenderer(this, 0, name);
+	}
+
+	public ItemShovelBase setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
 	}
 
 	@Override

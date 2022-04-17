@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "eldritch_mod:items/eldritch_ingot"
+        "layer0": "eldritch_mod:items/eldritch_shard"
     }
 }

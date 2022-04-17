@@ -2,6 +2,7 @@ package com.eldritchmod.blocks;
 
 import com.eldritchmod.Main;
 import com.eldritchmod.init.BlocksRegistry;
+import com.eldritchmod.init.ItemsRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

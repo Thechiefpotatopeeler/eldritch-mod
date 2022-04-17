@@ -2,8 +2,7 @@ package com.eldritchmod.init;
 
 import java.util.ArrayList;
 
-import com.eldritchmod.blocks.BlockBase;
-import com.eldritchmod.blocks.BlockCompressedCobblestone;
+import com.eldritchmod.blocks.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -11,22 +10,23 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class BlocksRegistry {
 	public static final ArrayList<BlockBase> BLOCKS = new ArrayList<BlockBase>();
-	public static final BlockCompressedCobblestone compressedCobblestone = new BlockCompressedCobblestone("compressed_cobblestone");
+	public static final EldritchBlock EldritchBlock = new EldritchBlock("eldritch_block");
+	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
 	
-	public static void register(IForgeRegistry<Block> registry) {
-		for(BlockBase block : BLOCKS) {
+	public static void register(final IForgeRegistry<Block> registry) {
+		for (final BlockBase block : BLOCKS) {
 			registry.register(block);
 		}
 	}
-	
-	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-		for(BlockBase block : BLOCKS) {
+
+	public static void registerItemBlocks(final IForgeRegistry<Item> registry) {
+		for (final BlockBase block : BLOCKS) {
 			registry.register(block.createItemBlock());
 		}
 	}
-	
+
 	public static void registerModels() {
-		for(BlockBase block : BLOCKS) {
+		for (final BlockBase block : BLOCKS) {
 			block.registerItemModel(Item.getItemFromBlock(block));
 		}
 	}

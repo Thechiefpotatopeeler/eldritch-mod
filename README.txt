@@ -1,7 +1,7 @@
 This is the eldritch mod!
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-Credit to me (Rhyw), the devs I personally invited to the project, the devs on github whose 
+Credit to me (Rhyw/thechiefpotatopeeler), the devs I personally invited to the project, the devs on github whose 
 ideas I accepted, Fith3r (the texture artist), and anyone else who I may add to this list later.
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

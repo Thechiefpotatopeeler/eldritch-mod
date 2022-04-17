@@ -3,6 +3,7 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 import com.eldritchmod.init.ItemsRegistry;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 
 public abstract class ItemPickaxeBase extends ItemPickaxe implements IRegisterable {
@@ -19,6 +20,11 @@ public abstract class ItemPickaxeBase extends ItemPickaxe implements IRegisterab
 	
 	public void registerItemModel() {
 		Main.proxy.registerItemRenderer(this, 0, name);
+	}
+
+	public ItemPickaxeBase setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
 	}
 
 	@Override

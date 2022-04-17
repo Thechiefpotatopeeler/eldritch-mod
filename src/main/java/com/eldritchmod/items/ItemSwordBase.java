@@ -3,6 +3,7 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 import com.eldritchmod.init.ItemsRegistry;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
 public abstract class ItemSwordBase extends ItemSword implements IRegisterable {
@@ -18,6 +19,11 @@ public abstract class ItemSwordBase extends ItemSword implements IRegisterable {
 	
 	public void registerItemModel() {
 		Main.proxy.registerItemRenderer(this, 0, name);
+	}
+
+	public ItemSwordBase setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
 	}
 
 	@Override

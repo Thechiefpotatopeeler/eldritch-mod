@@ -9,10 +9,12 @@ import net.minecraft.item.ItemSpade;
 
 public class EldritchShovel extends ItemShovelBase {
 
-	public static final Item.ToolMaterial Eldritch_TOOL_MATERIAL = EnumHelper.addToolMaterial("Eldritch", 3, 99999, 9999, 9999999, 14);
+	public static final Item.ToolMaterial Eldritch_TOOL_MATERIAL = EnumHelper.addToolMaterial("eldritch", 3, 1000, 500, 14, 14);
 	
 	public EldritchShovel(String name) {
 		super(Eldritch_TOOL_MATERIAL, name);
+
+		setCreativeTab(Main.eldritchmodtools);
 	}
 
 }
