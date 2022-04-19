@@ -1,11 +1,9 @@
 package com.eldritchmod.tabs;
 
-import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class EldritchMaterials extends CreativeTabs {
     

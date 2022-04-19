@@ -36,11 +36,11 @@ minecraft {
 repositories { 
     /*maven { 
         url "https://maven.mcmoddev.com/" 
-    } */
+    }*/
 } 
 
 dependencies { 
-    /*deobfCompile "net.ilexiconn:llibrary:1.7.19-1.12.2"*/
+    //deobfCompile "net.ilexiconn:llibrary:1.7.19-1.12.2"
 }
 
 processResources {

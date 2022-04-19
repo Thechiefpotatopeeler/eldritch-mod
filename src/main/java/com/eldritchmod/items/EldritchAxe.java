@@ -3,7 +3,6 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemAxe;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class EldritchAxe extends ItemAxeBase {

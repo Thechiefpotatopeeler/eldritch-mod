@@ -6,7 +6,7 @@ import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 
-public abstract class ItemAxeBase extends ItemAxe implements IRegisterable, ICreativeTabbable {
+public abstract class ItemAxeBase extends ItemAxe implements IRegisterable {
 
 	protected String name;
 	

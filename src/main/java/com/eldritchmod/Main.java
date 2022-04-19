@@ -25,7 +25,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME/*, dependencies = "required-after:llibrary@[1.7.19,)"*/ /*, updateJSON = Main.updateJSON)*/ )
+@Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME, dependencies = "required-after:llibrary@[1.7.19,)" /*, updateJSON = Main.updateJSON)*/ )
 public class Main {
 	public static final String MOD_ID = "eldritch_mod";
 	public static final String VERSION = "1.0";

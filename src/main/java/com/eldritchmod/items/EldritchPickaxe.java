@@ -3,7 +3,6 @@ package com.eldritchmod.items;
 import com.eldritchmod.Main;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class EldritchPickaxe extends ItemPickaxeBase {
