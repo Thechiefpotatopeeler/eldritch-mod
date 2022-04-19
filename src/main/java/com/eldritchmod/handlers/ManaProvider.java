@@ -16,34 +16,29 @@ import net.minecraftforge.common.capabilities.ICapabilitySerializable;
  * implementation of IMana to the target's (Entity, TE, ItemStack, etc.)
  * disposal.
  */
-public class ManaProvider implements ICapabilitySerializable<NBTBase>
-{
- @CapabilityInject(IMana.class)
- public static final Capability<IMana> MANA_CAP = null;
+public class ManaProvider implements ICapabilitySerializable<NBTBase> {
+    @CapabilityInject(IMana.class)
+    public static final Capability<IMana> MANA_CAP = null;
 
- private IMana instance = MANA_CAP.getDefaultInstance();
+    private IMana instance = MANA_CAP.getDefaultInstance();
 
- @Override
- public boolean hasCapability(Capability<?> capability, EnumFacing facing)
- {
- return capability == MANA_CAP;
- }
+    @Override
+    public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
+        return capability == MANA_CAP;
+    }
 
- @Override
- public <T> T getCapability(Capability<T> capability, EnumFacing facing)
- {
- return capability == MANA_CAP ? MANA_CAP.<T> cast(this.instance) : null;
- }
+    @Override
+    public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
+        return capability == MANA_CAP ? MANA_CAP.<T> cast(this.instance) : null;
+    }
 
- @Override
- public NBTBase serializeNBT()
- {
- return MANA_CAP.getStorage().writeNBT(MANA_CAP, this.instance, null);
- }
+    @Override
+    public NBTBase serializeNBT() {
+        return MANA_CAP.getStorage().writeNBT(MANA_CAP, this.instance, null);
+    }
 
- @Override
- public void deserializeNBT(NBTBase nbt)
- {
- MANA_CAP.getStorage().readNBT(MANA_CAP, this.instance, null, nbt);
- }
+    @Override
+    public void deserializeNBT(NBTBase nbt) {
+        MANA_CAP.getStorage().readNBT(MANA_CAP, this.instance, null, nbt);
+    }
 }

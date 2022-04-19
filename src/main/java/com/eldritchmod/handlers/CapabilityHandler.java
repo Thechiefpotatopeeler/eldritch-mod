@@ -2,6 +2,7 @@ package com.eldritchmod.handlers;
 
 import com.eldritchmod.Main;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -12,14 +13,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  * 
  * This class is responsible for attaching our capabilities
  */
-public class CapabilityHandler
-{
- public static final ResourceLocation MANA_CAP = new ResourceLocation(Main.MOD_ID, "mana");
- 
- @SubscribeEvent
- public void attachCapability(AttachCapabilitiesEvent.Entity event)
- {
- if (!(event.getEntity() instanceof EntityPlayer)) return;
+public class CapabilityHandler{
+    public static final ResourceLocation MANA_CAP = new ResourceLocation(Main.MOD_ID, "mana");
+    
+    @SubscribeEvent
+    public void attachCapability(AttachCapabilitiesEvent<Entity> event) {
+        if (!(event.getEntity() instanceof EntityPlayer)) return;
 
- event.addCapability(MANA_CAP, new ManaProvider());
- }
+    event.addCapability(MANA_CAP, new ManaProvider());
+    }
+}
