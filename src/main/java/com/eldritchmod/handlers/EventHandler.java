@@ -1,5 +1,7 @@
 package com.eldritchmod.handlers;
 
+import com.eldritchmod.data.IMana;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

@@ -1,5 +1,7 @@
 package com.eldritchmod.handlers;
 
+import com.eldritchmod.data.IMana;
+
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;

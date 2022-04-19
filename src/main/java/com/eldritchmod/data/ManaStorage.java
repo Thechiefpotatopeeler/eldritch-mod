@@ -1,6 +1,5 @@
 package com.eldritchmod.data;
 
-import com.eldritchmod.handlers.IMana;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagInt;
