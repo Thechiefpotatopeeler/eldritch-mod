@@ -1,0 +1,11 @@
+{
+    "homepage": "<homepage/download page for your mod>",
+    "<mcversion>": {
+      "<modversion>": "<changelog for this version>"
+    },
+    "promos": {
+      "<mcversion>-latest": "<modversion>",
+     
+      "<mcversion>-recommended": "<modversion>"
+    }
+  }
