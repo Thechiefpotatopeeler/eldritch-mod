@@ -13,7 +13,6 @@ public class ConfigHandler {
 
     public static boolean enableMana = true;
     public static boolean enableManaOverlay = true;
-    public static int maximumMana = 250;
 
     public static void init(File file) {
         config = new Configuration(file);

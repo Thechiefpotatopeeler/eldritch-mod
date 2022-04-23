@@ -1,6 +1,12 @@
 package com.eldritchmod;
 
+import com.eldritchmod.data.IMana;
+import com.eldritchmod.data.Mana;
+import com.eldritchmod.data.ManaStorage;
 import com.eldritchmod.handlers.ConfigHandler;
+import com.eldritchmod.handlers.ManaHandler;
+import com.eldritchmod.handlers.ManaOverlayHandler;
+import com.eldritchmod.handlers.CapabilityHandler;
 import com.eldritchmod.init.BlockOresRegistry;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.ItemsRegistry;
@@ -13,6 +19,8 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -50,6 +58,8 @@ public class Main {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		ConfigHandler.registerConfig(event);	
+		CapabilityManager.INSTANCE.register(IMana.class, new ManaStorage(), Mana::new);
+		
 	}
 	
 	@EventHandler
@@ -59,6 +69,9 @@ public class Main {
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
+		MinecraftForge.EVENT_BUS.register(new ManaHandler());
+		MinecraftForge.EVENT_BUS.register(new ManaOverlayHandler());
 
 	}
 	
