@@ -1,17 +1,17 @@
 {
-    "type": "minecraft:crafting_shapeless",
-
+    "type": "minecraft:crafting_shaped",
     "pattern": [
         "III",
         "III",
         "III"
-    ], 
-    "key":{
-        "I":
-        {
+    ],
+    "key": {
+        "I": {
             "item": "eldritch_mod:eldritch_shard"
         }
     },
-    "result": "eldritch_mod:eldritch_block",
-    "count": 1
+    "result": {
+        "item": "eldritch_mod:eldritch_block",
+        "count": 1
+    }
 }
