@@ -4,11 +4,13 @@ import com.eldritchmod.data.IMana;
 import com.eldritchmod.data.Mana;
 import com.eldritchmod.data.ManaStorage;
 import com.eldritchmod.handlers.ConfigHandler;
+import com.eldritchmod.handlers.EntityRenderHandler;
 import com.eldritchmod.handlers.ManaHandler;
 import com.eldritchmod.handlers.ManaOverlayHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
 import com.eldritchmod.init.BlockOresRegistry;
 import com.eldritchmod.init.BlocksRegistry;
+import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 import com.eldritchmod.proxy.CommonProxy;
 import com.eldritchmod.tabs.*;
@@ -59,6 +61,8 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent event) {
 		ConfigHandler.registerConfig(event);	
 		CapabilityManager.INSTANCE.register(IMana.class, new ManaStorage(), Mana::new);
+		EntitiesRegistry.registerEntities();
+		EntityRenderHandler.registerEntityRenders();
 		
 	}
 	

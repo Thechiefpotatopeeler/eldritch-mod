@@ -11,7 +11,7 @@ import com.eldritchmod.data.IMana;
 
 public class ManaOverlayHandler extends Gui {
 
-    private final ResourceLocation manaBar = new ResourceLocation(Main.MOD_ID, "textures/GUI/manabar");
+    private final ResourceLocation manaBar = new ResourceLocation("eldritch_mod:textures/gui/manabar.png");
     private int tex_width = 5, tex_height = 100;
 
     @SubscribeEvent
