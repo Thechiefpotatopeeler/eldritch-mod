@@ -17,11 +17,13 @@ public class ItemsRegistry {
 	public static final EldritchAxe EldritchAxe = new EldritchAxe("eldritch_axe");
 	public static final EldritchShovel EldritchShovel = new EldritchShovel("eldritch_shovel");
 	public static final EldritchHoe EldritchHoe = new EldritchHoe("eldritch_hoe");
+	public static final EuphoriumDust EuphoriumDust = new EuphoriumDust("euphorium_dust");
+	public static final SpiderFang SpiderFang = new SpiderFang("spider_fang");
 	
 //	public static final Material TOOL_MATERIAL = EnumHelper.add
 	
 	public static void register(IForgeRegistry<Item> registry) {		
-		registry.registerAll(EldritchShard, EldritchSword, EldritchPickaxe, EldritchAxe, EldritchShovel, EldritchHoe);
+		registry.registerAll(EldritchShard, EuphoriumDust, SpiderFang, EldritchSword, EldritchPickaxe, EldritchAxe, EldritchShovel, EldritchHoe);
 	}
 	
 //	public static void registerSwords(IForgeRegistry<ItemSword> registry) {

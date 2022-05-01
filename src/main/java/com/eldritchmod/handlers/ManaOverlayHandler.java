@@ -12,14 +12,15 @@ import com.eldritchmod.data.IMana;
 public class ManaOverlayHandler extends Gui {
 
     private final ResourceLocation manaBar = new ResourceLocation("eldritch_mod:textures/gui/manabar.png");
-    private int tex_width = 5, tex_height = 100;
+    private static final int TEX_WIDTH = 5, TEX_HEIGHT = 100;
+    //Getting the location of the texture and setting the width and height of the texture.
 
     @SubscribeEvent
     public void renderOverlay(RenderGameOverlayEvent event){
         if (event.getType() == RenderGameOverlayEvent.ElementType.TEXT){
             Minecraft mc = Minecraft.getMinecraft();
-            mc.renderEngine.bindTexture(manaBar);
-            drawTexturedModalRect(0,0,0,0,tex_width,tex_height); //The first drawing of the bar
+            mc.renderEngine.bindTexture(manaBar); //This stuff is about adding the texture to the screen/
+            drawTexturedModalRect(0,0,0,0,TEX_WIDTH,TEX_HEIGHT); //The first drawing of the bar
         }
     }
     

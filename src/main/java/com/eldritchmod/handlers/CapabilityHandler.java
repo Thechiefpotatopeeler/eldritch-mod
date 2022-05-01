@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  * This class is responsible for attaching our capabilities
  */
 public class CapabilityHandler{
-   public static final ResourceLocation MANA_CAP = new ResourceLocation(Main.MOD_ID, "mana");
+    public static final ResourceLocation MANA_CAP = new ResourceLocation(Main.MOD_ID, "mana");
     
     @SubscribeEvent
     public void attachCapability(AttachCapabilitiesEvent<Entity> event) {
