@@ -7,7 +7,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import com.eldritchmod.Main;
-import com.eldritchmod.data.IMana;
+import com.eldritchmod.data.Mana;
 
 public class ManaOverlayHandler extends Gui {
 
