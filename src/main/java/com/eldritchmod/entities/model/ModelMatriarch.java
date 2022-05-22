@@ -27,44 +27,44 @@ public class ModelMatriarch extends ModelBase {
         this.textureHeight = 32;
         this.head = new ModelRenderer(this, 32, 4);
         this.head.setRotationPoint(0.0F, 15.0F, -3.0F);
-        this.head.addBox(-4.0F, -4.0F, -8.0F, 8, 8, 8, 2.0F);
+        this.head.addBox(-4.0F, -4.0F, -8.0F, 8, 8, 8, 5F);
         this.mid_front_left_leg = new ModelRenderer(this, 18, 0);
         this.mid_front_left_leg.setRotationPoint(-4.0F, 15.0F, 0.0F);
-        this.mid_front_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.mid_front_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(mid_front_left_leg, 0.0F, -0.39269908169872414F, -0.5811946409141118F);
         this.torso_2 = new ModelRenderer(this, 0, 12);
         this.torso_2.setRotationPoint(0.0F, 15.0F, 9.0F);
-        this.torso_2.addBox(-5.0F, -4.0F, -6.0F, 10, 8, 12, 2.0F);
+        this.torso_2.addBox(-5.0F, -4.0F, -6.0F, 10, 8, 12, 5F);
         this.torso_1 = new ModelRenderer(this, 0, 0);
         this.torso_1.setRotationPoint(0.0F, 15.0F, 0.0F);
-        this.torso_1.addBox(-3.0F, -3.0F, -3.0F, 6, 6, 6, 2.0F);
+        this.torso_1.addBox(-3.0F, -3.0F, -3.0F, 6, 6, 6, 5F);
         this.back_left_leg = new ModelRenderer(this, 18, 0);
         this.back_left_leg.setRotationPoint(-4.0F, 15.0F, 2.0F);
-        this.back_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.back_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(back_left_leg, 0.0F, 0.7853981633974483F, -0.7853981633974483F);
         this.mid_front_right_leg = new ModelRenderer(this, 18, 0);
         this.mid_front_right_leg.setRotationPoint(4.0F, 15.0F, 0.0F);
-        this.mid_front_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.mid_front_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(mid_front_right_leg, 0.0F, 0.39269908169872414F, 0.5811946409141118F);
         this.mid_back_right_leg = new ModelRenderer(this, 18, 0);
         this.mid_back_right_leg.setRotationPoint(4.0F, 15.0F, 1.0F);
-        this.mid_back_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.mid_back_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(mid_back_right_leg, 0.0F, -0.39269908169872414F, 0.5811946409141118F);
         this.front_left_leg = new ModelRenderer(this, 18, 0);
         this.front_left_leg.setRotationPoint(-4.0F, 15.0F, -1.0F);
-        this.front_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.front_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(front_left_leg, 0.0F, -0.7853981633974483F, -0.7853981633974483F);
         this.front_right_leg = new ModelRenderer(this, 18, 0);
         this.front_right_leg.setRotationPoint(4.0F, 15.0F, -1.0F);
-        this.front_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.front_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(front_right_leg, 0.0F, 0.7853981633974483F, 0.7853981633974483F);
         this.back_right_leg = new ModelRenderer(this, 18, 0);
         this.back_right_leg.setRotationPoint(4.0F, 15.0F, 2.0F);
-        this.back_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.back_right_leg.addBox(-1.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(back_right_leg, 0.0F, -0.7853981633974483F, 0.7853981633974483F);
         this.mid_back_left_leg = new ModelRenderer(this, 18, 0);
         this.mid_back_left_leg.setRotationPoint(-4.0F, 15.0F, 1.0F);
-        this.mid_back_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 2.0F);
+        this.mid_back_left_leg.addBox(-15.0F, -1.0F, -1.0F, 16, 2, 2, 5F);
         this.setRotateAngle(mid_back_left_leg, 0.0F, 0.39269908169872414F, -0.5811946409141118F);
     }
 
@@ -93,16 +93,16 @@ public class ModelMatriarch extends ModelBase {
     }
     @Override
     public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
-        this.front_right_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.back_right_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.front_right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.back_right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 
-        this.mid_front_right_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.mid_back_right_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.mid_front_right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.mid_back_right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 
-        this.front_left_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-        this.back_left_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.front_left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.back_left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 
-        this.mid_front_left_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-        this.mid_back_left_leg.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.mid_front_left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.mid_back_left_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
     }
 }
