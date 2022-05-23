@@ -1,7 +1,11 @@
 package com.eldritchmod.handlers;
 
+import com.eldritchmod.entities.EntityYellowMoobloom;
+import com.eldritchmod.entities.EntityRedMoobloom;
 import com.eldritchmod.entities.EntitySpiderMatriarch;
 import com.eldritchmod.entities.render.RenderMatriarch;
+import com.eldritchmod.entities.render.RenderRedMoobloom;
+import com.eldritchmod.entities.render.RenderYellowMoobloom;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.renderer.entity.Render;
@@ -16,6 +20,24 @@ public class EntityRenderHandler {
             @Override
             public Render<? super EntitySpiderMatriarch> createRenderFor(RenderManager manager) {
                 return new RenderMatriarch(manager);
+            }
+        });
+
+        
+            
+        RenderingRegistry.registerEntityRenderingHandler(EntityYellowMoobloom.class,new IRenderFactory<EntityYellowMoobloom>(){
+
+            @Override
+            public Render<? super EntityYellowMoobloom> createRenderFor(RenderManager manager) {
+                return new RenderYellowMoobloom(manager);
+            }
+        });
+        
+        RenderingRegistry.registerEntityRenderingHandler(EntityRedMoobloom.class,new IRenderFactory<EntityRedMoobloom>(){
+
+            @Override
+            public Render<? super EntityRedMoobloom> createRenderFor(RenderManager manager) {
+                return new RenderRedMoobloom(manager);
             }
         });
     }
