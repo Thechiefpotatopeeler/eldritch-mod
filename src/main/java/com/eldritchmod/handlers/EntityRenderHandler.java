@@ -1,9 +1,11 @@
 package com.eldritchmod.handlers;
 
 import com.eldritchmod.entities.EntityYellowMoobloom;
+import com.eldritchmod.entities.EntityPoobloom;
 import com.eldritchmod.entities.EntityRedMoobloom;
 import com.eldritchmod.entities.EntitySpiderMatriarch;
 import com.eldritchmod.entities.render.RenderMatriarch;
+import com.eldritchmod.entities.render.RenderPoobloom;
 import com.eldritchmod.entities.render.RenderRedMoobloom;
 import com.eldritchmod.entities.render.RenderYellowMoobloom;
 
@@ -40,6 +42,13 @@ public class EntityRenderHandler {
                 return new RenderRedMoobloom(manager);
             }
         });
-    }
-    
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityPoobloom.class,new IRenderFactory<EntityPoobloom>(){
+                
+                @Override
+                public Render<? super EntityPoobloom> createRenderFor(RenderManager manager) {
+                    return new RenderPoobloom(manager);
+                }
+            });
+        }   
 }
