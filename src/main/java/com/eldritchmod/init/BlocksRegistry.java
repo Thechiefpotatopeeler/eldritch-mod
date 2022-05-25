@@ -26,7 +26,8 @@ public class BlocksRegistry {
 
 	public static void registerModels() {
 		for (final BlockBase block : BLOCKS) {
-			block.registerItemModel(Item.getItemFromBlock(block));
+			block.registerItemModel();
+			System.out.println("The poo party continues, model time,l,fdsalk;fgdjska[rtgekjgre;jikl;kjiol");
 		}
 	}
 }

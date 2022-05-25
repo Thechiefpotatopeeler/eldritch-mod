@@ -19,4 +19,5 @@ public class ClientProxy extends CommonProxy{
 	public void registerItemRenderer(Item item, int metadataValue, String itemId) {
 		ModelLoader.setCustomModelResourceLocation(item, metadataValue, new ModelResourceLocation(Main.MOD_ID + ":" + itemId, "inventory"));
 	}
+	
 }

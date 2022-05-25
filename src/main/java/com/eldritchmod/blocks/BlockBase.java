@@ -2,7 +2,7 @@ package com.eldritchmod.blocks;
 
 import com.eldritchmod.Main;
 import com.eldritchmod.init.BlocksRegistry;
-import com.eldritchmod.init.ItemsRegistry;
+import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -10,21 +10,23 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
-public class BlockBase extends Block {
+public class BlockBase extends Block implements IRegisterable {
 
 	protected String name;
 	
 	public BlockBase(Material material, String name) {
 		super(material);
+		this.name = name;
 
 		setTranslationKey(name);
 		setRegistryName(name);
 		
 		BlocksRegistry.BLOCKS.add(this);
 	}
-	
-	public void registerItemModel(Item itemBlock) {
-		Main.proxy.registerItemRenderer(itemBlock, 0, name);
+
+	@Override
+	public void registerItemModel() {
+		Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, name);
 	}
 	
 	public Item createItemBlock() {
@@ -37,6 +39,12 @@ public class BlockBase extends Block {
 	public BlockBase setCreativeTab(CreativeTabs tab) {
 		super.setCreativeTab(tab);
 		return this;
+	}
+
+	@Override
+	public void updateRegistryAndLocalizedName(String name) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

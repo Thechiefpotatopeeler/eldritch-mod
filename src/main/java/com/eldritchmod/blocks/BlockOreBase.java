@@ -20,6 +20,7 @@ public class BlockOreBase extends Block implements IMetaName {
 
 	public BlockOreBase(String name) {
 		super(Material.ROCK);
+		this.name=name;
 
 		setTranslationKey(name);
 		setRegistryName(name);

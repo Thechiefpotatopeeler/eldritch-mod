@@ -63,6 +63,7 @@ public class Main {
 		CapabilityManager.INSTANCE.register(IMana.class, new ManaStorage(), Mana::new);
 		EntitiesRegistry.registerEntities();
 		EntityRenderHandler.registerEntityRenders();
+
 		
 	}
 	
@@ -96,6 +97,7 @@ public class Main {
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
 			BlocksRegistry.register(event.getRegistry());
 			BlockOresRegistry.register(event.getRegistry());
+		
 		}
 		
 		@SubscribeEvent
