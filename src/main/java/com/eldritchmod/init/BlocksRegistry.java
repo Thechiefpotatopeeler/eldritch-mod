@@ -11,6 +11,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class BlocksRegistry {
 	public static final ArrayList<BlockBase> BLOCKS = new ArrayList<BlockBase>();
 	public static final EldritchBlock EldritchBlock = new EldritchBlock("eldritch_block");
+	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
 	
 	public static void register(final IForgeRegistry<Block> registry) {
 		for (final BlockBase block : BLOCKS) {

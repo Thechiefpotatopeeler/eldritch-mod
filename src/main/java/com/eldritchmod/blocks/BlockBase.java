@@ -1,11 +1,14 @@
 package com.eldritchmod.blocks;
 
+import java.util.Random;
+
 import com.eldritchmod.Main;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -43,8 +46,11 @@ public class BlockBase extends Block implements IRegisterable {
 
 	@Override
 	public void updateRegistryAndLocalizedName(String name) {
-		// TODO Auto-generated method stub
 
+	}
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return Item.getItemFromBlock(this);
 	}
 
 }

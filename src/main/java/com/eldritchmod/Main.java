@@ -8,7 +8,6 @@ import com.eldritchmod.handlers.EntityRenderHandler;
 import com.eldritchmod.handlers.ManaHandler;
 import com.eldritchmod.handlers.ManaOverlayHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
-import com.eldritchmod.init.BlockOresRegistry;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
@@ -39,7 +38,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME, dependencies = "required-after:llibrary@[1.7.19,)" /*, updateJSON = Main.updateJSON)*/ )
 public class Main {
 	public static final String MOD_ID = "eldritch_mod";
-	public static final String VERSION = "1.2";
+	public static final String VERSION = "1.3";
 	public static final String NAME = "Eldritch mod";
 	public static File config;
 	//public static final String updateJSON = "";
@@ -96,7 +95,6 @@ public class Main {
 		@SubscribeEvent
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
 			BlocksRegistry.register(event.getRegistry());
-			BlockOresRegistry.register(event.getRegistry());
 		
 		}
 		
@@ -106,7 +104,6 @@ public class Main {
 				IForgeRegistry<Item> registry = event.getRegistry();
 				ItemsRegistry.register(registry);
 				BlocksRegistry.registerItemBlocks(event.getRegistry());
-				BlockOresRegistry.registerItemBlocks(event.getRegistry());
 			}
 			catch(ArrayIndexOutOfBoundsException ex) {
 				String message = ex.getMessage();
@@ -122,7 +119,6 @@ public class Main {
 		public static void registerItems(ModelRegistryEvent event) {
 			ItemsRegistry.registerModels();
 			BlocksRegistry.registerModels();
-			BlockOresRegistry.registerModels();
 		}
 		
 		

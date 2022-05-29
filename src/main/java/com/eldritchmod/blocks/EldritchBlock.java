@@ -1,11 +1,9 @@
 package com.eldritchmod.blocks;
 
-import com.eldritchmod.Main;
-import com.eldritchmod.blocks.BlockBase;
-import com.eldritchmod.tabs.EldritchTools;
+import java.util.Random;
 
+import com.eldritchmod.Main;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 
 public class EldritchBlock extends BlockBase {
@@ -15,5 +13,4 @@ public class EldritchBlock extends BlockBase {
         setCreativeTab(Main.eldritchmodmaterials);
         
     }
-    
 }
