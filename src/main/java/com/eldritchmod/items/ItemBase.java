@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IRegisterable, ICreativeTabbable {
 	
-	public static String name;	
+	protected String name;	
 	
 	public ItemBase(String name) {
 		this.name = name;	

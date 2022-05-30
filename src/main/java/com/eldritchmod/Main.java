@@ -13,6 +13,7 @@ import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 import com.eldritchmod.proxy.CommonProxy;
 import com.eldritchmod.tabs.*;
+import com.eldritchmod.worldgen.OreGen;
 
 import java.io.File;
 
@@ -34,6 +35,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME, dependencies = "required-after:llibrary@[1.7.19,)" /*, updateJSON = Main.updateJSON)*/ )
 public class Main {
@@ -68,7 +70,7 @@ public class Main {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-
+		GameRegistry.registerWorldGenerator(new OreGen(),0);
 	}
 	
 	@EventHandler
