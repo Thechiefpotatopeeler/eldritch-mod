@@ -20,7 +20,7 @@ public class CapabilityHandler{
     public void attachCapability(AttachCapabilitiesEvent<Entity> event) {
         if (event.getObject() instanceof EntityPlayer) { 
             event.addCapability(MANA_CAP, new ManaProvider());
-            System.out.println("attached mana capability");
+            //System.out.println("attached mana capability"); This was the only sensible debug message I could make
         }
 
     }

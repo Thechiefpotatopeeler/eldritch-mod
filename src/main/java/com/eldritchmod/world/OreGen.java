@@ -1,4 +1,4 @@
-package com.eldritchmod.worldgen;
+package com.eldritchmod.world;
 
 import java.util.Random;
 

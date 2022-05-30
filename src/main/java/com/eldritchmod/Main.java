@@ -8,12 +8,13 @@ import com.eldritchmod.handlers.EntityRenderHandler;
 import com.eldritchmod.handlers.ManaHandler;
 import com.eldritchmod.handlers.ManaOverlayHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
+import com.eldritchmod.init.BiomeRegistry;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 import com.eldritchmod.proxy.CommonProxy;
 import com.eldritchmod.tabs.*;
-import com.eldritchmod.worldgen.OreGen;
+import com.eldritchmod.world.OreGen;
 
 import java.io.File;
 
@@ -71,6 +72,7 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
+		BiomeRegistry.registerBiomes();
 	}
 	
 	@EventHandler
