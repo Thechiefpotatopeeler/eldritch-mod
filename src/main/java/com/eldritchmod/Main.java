@@ -6,7 +6,7 @@ import com.eldritchmod.data.ManaStorage;
 import com.eldritchmod.handlers.ConfigHandler;
 import com.eldritchmod.handlers.EntityRenderHandler;
 import com.eldritchmod.handlers.ManaHandler;
-import com.eldritchmod.handlers.ManaOverlayHandler;
+import com.eldritchmod.handlers.OverlayHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
 import com.eldritchmod.init.BiomeRegistry;
 import com.eldritchmod.init.BlocksRegistry;
@@ -79,7 +79,7 @@ public class Main {
 	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
 		MinecraftForge.EVENT_BUS.register(new ManaHandler());
-		MinecraftForge.EVENT_BUS.register(new ManaOverlayHandler());
+		MinecraftForge.EVENT_BUS.register(new OverlayHandler());
 
 	}
 	
