@@ -2,7 +2,7 @@ package com.eldritchmod.data;
 
 public class MagicUserType {
     
-    enum MagicUserTypes {
+    public enum MagicUserTypes {
         /*
         Magic users must choose a path to gain more power, once they do so, they must go down the path unlocking new abilities.
         The types of magic have two paths each, wizards are those who choose to study the magic through research, spellcasting, and spellcrafting,
@@ -30,7 +30,7 @@ public class MagicUserType {
         ELDRITCH_WIZARD        
     }
 
-    private MagicUserTypes magicUserType = MagicUserTypes.NONE;
+    private MagicUserTypes magicUserType = MagicUserTypes.ELDRITCH_WIZARD;
 
     public void set(MagicUserTypes type) {//Allows for the setting of the magic user type
         this.magicUserType = type;
