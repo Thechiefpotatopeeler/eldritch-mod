@@ -1,7 +1,5 @@
 package com.eldritchmod.blocks;
 
-import java.util.Random;
-
 import com.eldritchmod.Main;
 import net.minecraft.block.material.Material;
 

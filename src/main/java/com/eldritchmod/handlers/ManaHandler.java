@@ -17,6 +17,7 @@ public class ManaHandler {
         IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
         mana.set(50);
         System.out.println("Player mana: " + mana.getMana());
+        System.out.println(player);
         
         String message = String.format("Hello there, you have §7%d§r mana.", (int) mana.getMana());
         player.sendMessage(new TextComponentString(message));

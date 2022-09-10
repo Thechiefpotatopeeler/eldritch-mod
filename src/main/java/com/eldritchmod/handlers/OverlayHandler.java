@@ -5,7 +5,6 @@ import com.eldritchmod.data.IMana;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -20,6 +19,7 @@ public class OverlayHandler extends Gui {
             mc.renderEngine.bindTexture(bar);
             IMana mana = mc.player.getCapability(ManaProvider.MANA_CAP, null); //Gets the mana
             //System.out.println("Player mana:dsssssssssssssfedfewefwewewdwefdfsapoo " + mana.getMana()); //Prints the mana
+            System.out.println(mc.player);
             drawTexturedModalRect(0,0,0,0,tex_width,tex_height); //The first drawing of the bar
             drawTexturedModalRect(0,0,tex_width,0,tex_width,mana.getMana()); //The second drawing of the bar
         }

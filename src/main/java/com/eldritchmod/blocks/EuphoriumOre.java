@@ -3,8 +3,6 @@ package com.eldritchmod.blocks;
 import java.util.Random;
 
 import com.eldritchmod.Main;
-import com.eldritchmod.items.EuphoriumDust;
-import com.eldritchmod.items.ItemBase;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
