@@ -12,7 +12,7 @@ tile.eldritch_block.name=Block of eldritch
 tile.euphorium_ore.name=Euphorium ore
 tile.log_twilight_yarrow.name=Twilight yarrow
 //Creative tabs
-itemGroup.eldritchmodtools=Eldritch mod tools
+itemGroup.eldritchmodtools=Eldritch mod tools and combat
 itemGroup.eldritchmodmaterials=Eldritch mod materials
 //Entities
 entity.matriarch.name=Spider Matriarch
