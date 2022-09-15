@@ -12,6 +12,7 @@ import com.eldritchmod.handlers.PlayerRenderHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
 import com.eldritchmod.init.BiomeRegistry;
 import com.eldritchmod.init.BlocksRegistry;
+import com.eldritchmod.init.DimensionRegistry;
 import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 import com.eldritchmod.proxy.CommonProxy;
@@ -67,14 +68,15 @@ public class Main {
 		CapabilityManager.INSTANCE.register(IMana.class, new ManaStorage(), Mana::new);
 		EntitiesRegistry.registerEntities();
 		EntityRenderHandler.registerEntityRenders();
-
+		GameRegistry.registerWorldGenerator(new OreGen(),0);
+		BiomeRegistry.registerBiomes();
+		DimensionRegistry.registerDimensions();
 		
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerWorldGenerator(new OreGen(),0);
-		BiomeRegistry.registerBiomes();
+		
 	}
 	
 	@EventHandler

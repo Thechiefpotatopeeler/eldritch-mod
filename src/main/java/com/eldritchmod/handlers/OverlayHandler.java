@@ -19,7 +19,7 @@ public class OverlayHandler extends Gui {
             mc.renderEngine.bindTexture(bar);
             IMana mana = mc.player.getCapability(ManaProvider.MANA_CAP, null); //Gets the mana
             //System.out.println("Player mana:dsssssssssssssfedfewefwewewdwefdfsapoo " + mana.getMana()); //Prints the mana
-            System.out.println(mc.player);
+            //System.out.println(mc.player);
             drawTexturedModalRect(0,0,0,0,tex_width,tex_height); //The first drawing of the bar
             drawTexturedModalRect(0,0,tex_width,0,tex_width,mana.getMana()); //The second drawing of the bar
         }

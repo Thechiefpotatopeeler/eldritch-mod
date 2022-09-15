@@ -1,7 +1,5 @@
 package com.eldritchmod.init;
 
-import com.eldritchmod.world.BiomeEldritchForest;
-
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
@@ -12,10 +10,10 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class BiomeRegistry {
 
-    public static final Biome ELDRITCH_FOREST = new BiomeEldritchForest();
+    //public static final Biome ELDRITCH_FOREST = new BiomeEldritchForest();
     
     public static void registerBiomes() {
-        biomeInit(new BiomeEldritchForest(), "eldritch_forest", BiomeType.WARM, Type.FOREST, Type.HILLS, Type.MAGICAL, Type.DENSE);
+        //biomeInit(new BiomeEldritchForest(), "eldritch_forest", BiomeType.WARM, Type.FOREST, Type.HILLS, Type.MAGICAL, Type.DENSE);
     }
 
     private static Biome biomeInit(Biome biome, String name, BiomeType biomeType, Type... type){

@@ -27,7 +27,7 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
         this.name = name;
         setTranslationKey(name);
 		setRegistryName(name);
-        BlocksRegistry.LOGS.add(this);
+        // BlocksRegistry.LOGS.add(this);
 
     }
 

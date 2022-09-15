@@ -32,7 +32,7 @@ public class BlockLeafBase extends BlockLeaves implements IRegisterable {
 		setTranslationKey(name);
 		setRegistryName(name);
 
-		BlocksRegistry.LEAVES.add(this);
+		// BlocksRegistry.LEAVES.add(this);
 	}
 
 	@Override
