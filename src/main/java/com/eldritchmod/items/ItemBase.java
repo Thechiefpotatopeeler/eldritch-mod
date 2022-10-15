@@ -10,10 +10,11 @@ public class ItemBase extends Item implements IRegisterable, ICreativeTabbable {
 	
 	protected String name;	
 	
-	public ItemBase(String name) {
+	public ItemBase(String name, CreativeTabs tab) {
 		this.name = name;	
 		
 		updateRegistryAndLocalizedName(name);
+		setCreativeTab(tab);
 	}
 	
 	public void registerItemModel() {

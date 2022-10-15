@@ -10,7 +10,7 @@ public class ItemAxeBase extends ItemAxe implements IRegisterable{
 
     protected String name;
     public ItemAxeBase(ToolMaterial material, String name) {
-        super(material, 999,999);        
+        super(material,999,999);        
         this.name=name;
 
         updateRegistryAndLocalizedName(name);

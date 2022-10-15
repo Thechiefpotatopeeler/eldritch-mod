@@ -69,8 +69,8 @@ public class Main {
 		EntitiesRegistry.registerEntities();
 		EntityRenderHandler.registerEntityRenders();
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
-		BiomeRegistry.registerBiomes();
-		DimensionRegistry.registerDimensions();
+		//BiomeRegistry.registerBiomes();
+		//DimensionRegistry.registerDimensions();
 		
 	}
 	
