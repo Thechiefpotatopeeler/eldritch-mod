@@ -34,4 +34,8 @@ public abstract class ItemPickaxeBase extends ItemPickaxe implements IRegisterab
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
+	@Override
+    public String getName() {
+        return this.name;
+    }
 }

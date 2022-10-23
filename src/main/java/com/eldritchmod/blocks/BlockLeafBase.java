@@ -32,7 +32,7 @@ public class BlockLeafBase extends BlockLeaves implements IRegisterable {
 		setTranslationKey(name);
 		setRegistryName(name);
 
-		// BlocksRegistry.LEAVES.add(this);
+		BlocksRegistry.BLOCKS.add(this);
 	}
 
 	@Override
@@ -73,4 +73,8 @@ public class BlockLeafBase extends BlockLeaves implements IRegisterable {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+    public String getName() {
+        return this.name;
+    }
 }

@@ -3,6 +3,7 @@ package com.eldritchmod.init;
 import java.util.ArrayList;
 
 import com.eldritchmod.blocks.*;
+import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
@@ -11,40 +12,37 @@ import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class BlocksRegistry {
-	public static final ArrayList<BlockBase> BLOCKS = new ArrayList<BlockBase>();
+	public static final ArrayList<IRegisterable> BLOCKS = new ArrayList<IRegisterable>();
 	public static final EldritchBlock EldritchBlock = new EldritchBlock("eldritch_block");
 	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
-
-	/*public static final ArrayList<BlockLogBase> LOGS = new ArrayList<BlockLogBase>();
 	public static final BlockLogBase LogTwilightYarrow = new BlockLogBase("log_twilight_yarrow");
 
-	public static final ArrayList<BlockLeafBase> LEAVES = new ArrayList<BlockLeafBase>();
-	*/
+
+	
 	public static void register(final IForgeRegistry<Block> registry) {
-		for (final BlockBase block : BLOCKS) {
-			registry.register(block);
-		}
-		// for (final BlockLogBase block : LOGS) {
-		// 	registry.register(block);
-		// }
+		for (final IRegisterable block : BLOCKS) {
+			registry.register((Block) block);
+	}
+		
 	}
 
 	public static void registerItemBlocks(final IForgeRegistry<Item> registry) {
-		for (final BlockBase block : BLOCKS) {
-			registry.register(block.createItemBlock());
+		for (final IRegisterable block : BLOCKS) {
+			switch (block.getName()) {
+				case "log_twilight_yarrow":
+				registry.register(((BlockLogBase) LogTwilightYarrow).createItemBlock());
+				break;
+			default:
+				registry.register(((BlockBase) block).createItemBlock());
+				break;
 		}
-		// for (final BlockLogBase block : LOGS){
-		// 	registry.register(block.createItemBlock());
-		// }
+		}
+		
 	}
 
 	public static void registerModels() {
-		for (final BlockBase block : BLOCKS) {
+		for (final IRegisterable block : BLOCKS) {
 			block.registerItemModel();
-			//System.out.println("The poo party continues, model time,l,fdsalk;fgdjska[rtgekjgre;jikl;kjiol");
 		}
-		// for (final BlockLogBase block : LOGS) {
-		// 	block.registerItemModel();
-		// }
 	}
 }

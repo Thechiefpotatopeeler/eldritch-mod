@@ -33,4 +33,8 @@ public class ItemHoeBase extends ItemHoe implements IRegisterable{
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
+	@Override
+    public String getName() {
+        return this.name;
+    }
 }

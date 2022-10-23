@@ -33,4 +33,8 @@ public abstract class ItemSwordBase extends ItemSword implements IRegisterable {
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
+	@Override
+    public String getName() {
+        return this.name;
+    }
 }

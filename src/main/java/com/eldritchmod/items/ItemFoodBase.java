@@ -31,5 +31,9 @@ public class ItemFoodBase extends ItemFood implements ICreativeTabbable, IRegist
 		
 		ItemsRegistry.ITEMS.add(this);
 	}	
+    @Override
+    public String getName() {
+        return this.name;
+    }
     
 }

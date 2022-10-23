@@ -27,7 +27,7 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
         this.name = name;
         setTranslationKey(name);
 		setRegistryName(name);
-        // BlocksRegistry.LOGS.add(this);
+        BlocksRegistry.BLOCKS.add(this);
 
     }
 
@@ -95,4 +95,8 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
                 return this.name;
             }
         }
+    @Override
+    public String getName() {
+        return this.name;
+    }
 }

@@ -32,4 +32,8 @@ public class ItemAxeBase extends ItemAxe implements IRegisterable{
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
+	@Override
+    public String getName() {
+        return this.name;
+    }
 }

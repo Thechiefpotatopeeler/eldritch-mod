@@ -39,5 +39,9 @@ public class ItemBase extends Item implements IRegisterable, ICreativeTabbable {
 		setRegistryName(name);
 		
 		ItemsRegistry.ITEMS.add(this);
-	}	
+	}
+	@Override
+    public String getName() {
+        return this.name;
+    }	
 }
