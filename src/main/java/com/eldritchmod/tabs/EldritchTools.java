@@ -16,7 +16,6 @@ public class EldritchTools extends CreativeTabs {
 
     @Override
     public ItemStack createIcon() {
-        // TODO Auto-generated method stub
         return new ItemStack(ItemsRegistry.EldritchAxe);
     }
 

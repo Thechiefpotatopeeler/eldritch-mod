@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "eldritch_mod:items/euphorium_dust"
+        "layer0": "eldritch_mod:animated/euphorium_dust"
     }
 }

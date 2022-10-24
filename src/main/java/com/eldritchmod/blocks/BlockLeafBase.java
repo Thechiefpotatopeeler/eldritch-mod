@@ -64,13 +64,11 @@ public class BlockLeafBase extends BlockLeaves implements IRegisterable {
 
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public EnumType getWoodType(int meta) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override

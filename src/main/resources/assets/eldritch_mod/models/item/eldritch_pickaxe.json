@@ -4,9 +4,3 @@
         "layer0": "eldritch_mod:items/eldritch_pickaxe"
     }
 }
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "eldritch_mod:items/eldritch_pickaxe"
-    }
-}

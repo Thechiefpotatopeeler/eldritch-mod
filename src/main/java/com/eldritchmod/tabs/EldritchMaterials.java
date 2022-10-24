@@ -15,7 +15,6 @@ public class EldritchMaterials extends CreativeTabs {
 
     @Override
     public ItemStack createIcon() {
-        // TODO Auto-generated method stub
         return new ItemStack(ItemsRegistry.EldritchShard);//Gives it a block to use as a symbol.
     }
 
