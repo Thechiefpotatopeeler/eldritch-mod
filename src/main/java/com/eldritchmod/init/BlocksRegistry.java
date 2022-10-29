@@ -6,8 +6,6 @@ import com.eldritchmod.blocks.*;
 import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 

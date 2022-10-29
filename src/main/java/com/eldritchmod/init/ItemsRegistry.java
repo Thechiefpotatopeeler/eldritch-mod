@@ -21,7 +21,7 @@ public class ItemsRegistry {
 	public static final ItemBase EldritchShard = new ItemBase("eldritch_shard", Main.eldritchmodmaterials);	
 	public static final EldritchSword EldritchSword = new EldritchSword("eldritch_sword");
 	public static final EldritchPickaxe EldritchPickaxe = new EldritchPickaxe("eldritch_pickaxe");
-	public static final EldritchAxe EldritchAxe = new EldritchAxe("eldritch_axe");
+	public static final ItemAxeBase EldritchAxe = new ItemAxeBase(ELDRITCH_TOOL_MATERIAL, "eldritch_axe", 14, 14, Main.eldritchmodtools);
 	public static final EldritchShovel EldritchShovel = new EldritchShovel("eldritch_shovel");
 	public static final EldritchHoe EldritchHoe = new EldritchHoe("eldritch_hoe");
 	public static final ItemBase EuphoriumDust = new ItemBase("euphorium_dust", Main.eldritchmodmaterials);
@@ -42,10 +42,6 @@ public class ItemsRegistry {
 			item.registerItemModel();
 		}
 		
-//		EldritchSword.registerItemModel();
-//		EldritchPickaxe.registerItemModel();
-//		EldritchAxe.registerItemModel();
-//		EldritchShovel.registerItemModel();
 	}
 
 }

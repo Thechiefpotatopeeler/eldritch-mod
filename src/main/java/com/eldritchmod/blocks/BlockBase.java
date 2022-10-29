@@ -17,12 +17,13 @@ public class BlockBase extends Block implements IRegisterable {
 
 	protected String name;
 	
-	public BlockBase(Material material, String name) {
+	public BlockBase(Material material, String name, CreativeTabs tab) {
 		super(material);
 		this.name = name;
 
 		setTranslationKey(name);
 		setRegistryName(name);
+		setCreativeTab(tab);
 		
 		BlocksRegistry.BLOCKS.add(this);
 	}

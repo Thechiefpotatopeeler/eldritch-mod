@@ -10,8 +10,7 @@ import net.minecraft.item.Item;
 public class EuphoriumOre extends BlockBase {
 
     public EuphoriumOre(String name) {
-        super(Material.ROCK, name);
-        setCreativeTab(Main.eldritchmodmaterials);
+        super(Material.ROCK, name, Main.eldritchmodmaterials);
         createItemBlock();      
     }
     

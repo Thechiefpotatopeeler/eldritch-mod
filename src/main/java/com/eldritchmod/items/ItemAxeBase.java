@@ -9,9 +9,10 @@ import com.eldritchmod.Main;
 public class ItemAxeBase extends ItemAxe implements IRegisterable{
 
     protected String name;
-    public ItemAxeBase(ToolMaterial material, String name) {
-        super(material,999,999);        
+    public ItemAxeBase(ToolMaterial material, String name, int damage, int speed, CreativeTabs tab) {
+        super(material,damage,speed);        
         this.name=name;
+		setCreativeTab(tab);
 
         updateRegistryAndLocalizedName(name);
     }

@@ -7,8 +7,6 @@ import net.minecraft.block.material.Material;
 public class EldritchBlock extends BlockBase {
 
     public EldritchBlock(String name) {
-        super(Material.ROCK, name);
-        setCreativeTab(Main.eldritchmodmaterials);
-        
+        super(Material.ROCK, name, Main.eldritchmodmaterials);        
     }
 }
