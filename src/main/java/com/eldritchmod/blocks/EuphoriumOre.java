@@ -11,7 +11,8 @@ public class EuphoriumOre extends BlockBase {
 
     public EuphoriumOre(String name) {
         super(Material.ROCK, name, Main.eldritchmodmaterials);
-        createItemBlock();      
+        createItemBlock(); 
+        this.setHardness(3.0F);     
     }
     
     @Override

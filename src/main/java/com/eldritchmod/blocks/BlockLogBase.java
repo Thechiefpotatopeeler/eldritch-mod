@@ -7,6 +7,7 @@ import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.BlockRotatedPillar;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
@@ -28,6 +29,8 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
         setTranslationKey(name);
 		setRegistryName(name);
         BlocksRegistry.BLOCKS.add(this);
+        this.setHardness(2.0F);
+        this.setSoundType(SoundType.WOOD);
 
     }
 
