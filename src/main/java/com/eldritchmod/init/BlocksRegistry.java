@@ -14,6 +14,7 @@ public class BlocksRegistry {
 	public static final EldritchBlock EldritchBlock = new EldritchBlock("eldritch_block");
 	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
 	public static final BlockLogBase LogTwilightYarrow = new BlockLogBase("log_twilight_yarrow");
+	public static final EldritchAltar EldritchAltar = new EldritchAltar("eldritch_altar");
 
 
 	

@@ -15,7 +15,7 @@ public class ManaHandler {
         //This code will run whenever a player logs in, then set and tell them their current mana level.
         EntityPlayer player = event.player;
         IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
-        mana.set(50);
+        mana.set(100);
         System.out.println("Player mana: " + mana.getMana());
         System.out.println(player);
         

@@ -10,9 +10,10 @@ item.spider_fang.name=Spider fang
 //Blocks
 tile.eldritch_block.name=Block of eldritch
 tile.euphorium_ore.name=Euphorium ore
-tile.log_twilight_yarrow.name=Twilight yarrow
+tile.log_twilight_yarrow.name=Twilight yarrow log
+tile.eldritch_altar.name=Eldritch altar
 //Creative tabs
-itemGroup.eldritchmodtools=Eldritch mod tools and combat
+itemGroup.eldritchmodtools=Eldritch mod tools
 itemGroup.eldritchmodmaterials=Eldritch mod materials
 //Entities
 entity.matriarch.name=Spider Matriarch
