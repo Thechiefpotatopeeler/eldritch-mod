@@ -40,7 +40,7 @@ public class EldritchAltar extends BlockBase{
             if(playerIn.getHeldItemMainhand().getItem() == ItemsRegistry.EuphoriumDust){
                 int count = playerIn.getHeldItemMainhand().getCount();
                 playerIn.getHeldItemMainhand().setCount(0);
-                playerIn.attackEntityFrom(Ref.MESSING_WITH_ARCANE, 1F);
+                playerIn.attackEntityFrom(Ref.MESSING_WITH_ARCANE, (float) (count * 0.5));
                 playerIn.addItemStackToInventory(new ItemStack(ItemsRegistry.EldritchShard, count));
             }
             return false;
