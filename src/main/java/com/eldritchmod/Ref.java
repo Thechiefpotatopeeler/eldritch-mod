@@ -1,5 +1,7 @@
 package com.eldritchmod;
 
+import net.minecraft.util.DamageSource;
+
 public class Ref {
 
     //Entity IDs
@@ -10,4 +12,9 @@ public class Ref {
     public static final int ENTITY_BARNACLE = 124;
     //Dimension IDs
     public static final int BACKROOMS = 2;
+
+
+
+    //Damage Sources
+    public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor();
 }
