@@ -29,10 +29,10 @@ public class EldritchAltar extends BlockBase{
         return false;
     }
 
-    @Override
+    /*@Override
     public AxisAlignedBB getBoundingBox(IBlockState state, net.minecraft.world.IBlockAccess source, net.minecraft.util.math.BlockPos pos) {
         return new AxisAlignedBB(0.0625 * 2, 0, 0.0625 * 2, 0.0625 * 14, 0.0625 * 14, 0.0625 * 14);
-    }
+    }*/
 
     @Override
     public boolean onBlockActivated(World worldIn, net.minecraft.util.math.BlockPos pos, IBlockState state, EntityPlayer playerIn, net.minecraft.util.EnumHand hand, net.minecraft.util.EnumFacing facing, float hitX, float hitY, float hitZ) {
