@@ -13,8 +13,6 @@ public class Ref {
     //Dimension IDs
     public static final int BACKROOMS = 2;
 
-
-
     //Damage Sources
     public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor();
 }
