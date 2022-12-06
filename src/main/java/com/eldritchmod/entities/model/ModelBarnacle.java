@@ -3,7 +3,6 @@ package com.eldritchmod.entities.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
-
 /**
  * ModelSquid - Either Mojang or a mod author
  * Created using Tabula 7.1.0

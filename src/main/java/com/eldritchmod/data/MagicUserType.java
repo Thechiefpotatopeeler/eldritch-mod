@@ -5,7 +5,7 @@ public class MagicUserType {
     public enum MagicUserTypes {
         /*
         Magic users must choose a path to gain more power, once they do so, they must go down the path unlocking new abilities.
-        The types of magic have two paths each, wizards are those who choose to study the magic through research, spellcasting, and spellcrafting,
+        The types of magic have two paths each, wizards are those who choose to study the magic through research and spellcrafting,
         whereas sorcerers are those who choose to study magic through immersion and practice, having greater ability with magical combat and casting spells
         as opposed to greater ability at researching and developing spells. When starting out, a mage must choose between Soul, Astral, Nethengeic, or Abyssal.
 
@@ -30,7 +30,7 @@ public class MagicUserType {
         ELDRITCH_WIZARD        
     }
 
-    private MagicUserTypes magicUserType = MagicUserTypes.ELDRITCH_WIZARD;
+    private MagicUserTypes magicUserType = MagicUserTypes.NONE;
 
     public void set(MagicUserTypes type) {//Allows for the setting of the magic user type
         this.magicUserType = type;
