@@ -15,10 +15,7 @@ public class ManaHandler {
         //This code will run whenever a player logs in, then set and tell them their current mana level.
         EntityPlayer player = event.player;
         IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
-        switch (player.getCapability(MagicUserTypeProvider.MAGIC_USER_TYPE_CAP, null).getType()) {
-            case ELDRITCH_WIZARD:
-                mana.set(150);
-                break;
+        switch (mana.getMagicType()) {
             case ELDRITCH_SORCERER:
                 mana.set(150);
                 break;
@@ -28,14 +25,17 @@ public class ManaHandler {
             case NECROMANCER:
                 mana.set(150);
                 break;
+            case NONE:
+                mana.set(0);
+                break;
             default:
                 mana.set(100);
                 break;
             }
+        mana.set(100);
         System.out.println("Player mana: " + mana.getMana());
         System.out.println(player);
         
-        String message = String.format("Hello there, you have §7%d§r mana.", (int) mana.getMana());
-        player.sendMessage(new TextComponentString(message));
+        player.sendMessage(new TextComponentString("Your mana is: " + mana.getMana() + " and your magic type is: " + mana.getMagicType()));
     }
 }

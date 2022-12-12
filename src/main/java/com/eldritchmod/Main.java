@@ -5,7 +5,6 @@ import com.eldritchmod.data.Mana;
 import com.eldritchmod.data.ManaStorage;
 import com.eldritchmod.handlers.ConfigHandler;
 import com.eldritchmod.handlers.EntityRenderHandler;
-import com.eldritchmod.handlers.MagicUserTypeHandler;
 import com.eldritchmod.handlers.ManaHandler;
 import com.eldritchmod.handlers.OverlayHandler;
 import com.eldritchmod.handlers.PlayerRenderHandler;
@@ -85,8 +84,6 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new ManaHandler());
 		MinecraftForge.EVENT_BUS.register(new OverlayHandler());
 		MinecraftForge.EVENT_BUS.register(new PlayerRenderHandler());
-		MinecraftForge.EVENT_BUS.register(new MagicUserTypeHandler());
-
 	}
 	
 	@EventHandler
