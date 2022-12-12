@@ -1,8 +1,11 @@
 package com.eldritchmod.data;
 
 
+import com.eldritchmod.data.Mana.MagicUserTypes;
+
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagInt;
+import net.minecraft.nbt.NBTTagString;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 
@@ -12,11 +15,13 @@ import net.minecraftforge.common.capabilities.Capability;
 public class ManaStorage implements Capability.IStorage<IMana> {
     @Override
     public NBTBase writeNBT(Capability<IMana> capability, IMana instance, EnumFacing side) {
-        return new NBTTagInt(instance.getMana());
+        String out = Integer.toString(instance.getMana()) + "," + instance.getMagicType().toString();
+        return new NBTTagString(out);
     }
 
     @Override
     public void readNBT(Capability<IMana> capability, IMana instance, EnumFacing side, NBTBase nbt) {
-        instance.set(((NBTTagInt)nbt).getInt());
+        instance.set(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[0]));
+        instance.setMagicType(MagicUserTypes.valueOf(((NBTTagString)nbt).getString().split(",")[1]));
     }
 }
