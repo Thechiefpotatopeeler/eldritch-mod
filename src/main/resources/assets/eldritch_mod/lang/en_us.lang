@@ -15,6 +15,8 @@ tile.eldritch_altar.name=Eldritch altar
 //Creative tabs
 itemGroup.eldritchmodtools=Eldritch mod tools
 itemGroup.eldritchmodmaterials=Eldritch mod materials
+//Death messages
+death.attack.messing_with_arcane=%1$s's tomfoolery with the arcane went too far
 //Entities
 entity.matriarch.name=Spider Matriarch
 entity.yellowMoobloom.name=Yellow moobloom

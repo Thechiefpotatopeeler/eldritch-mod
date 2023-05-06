@@ -1,6 +1,9 @@
 package com.eldritchmod;
 
+import net.minecraft.client.resources.I18n;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.text.ITextComponent;
 
 public class Ref {
 
@@ -14,5 +17,5 @@ public class Ref {
     public static final int BACKROOMS = 2;
 
     //Damage Sources
-    public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor();
+    public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor().setMagicDamage();
 }
