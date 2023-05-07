@@ -7,7 +7,6 @@ import com.eldritchmod.Main;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.items.IRegisterable;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.material.Material;

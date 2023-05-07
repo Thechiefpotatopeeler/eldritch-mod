@@ -1,7 +1,5 @@
 package com.eldritchmod.handlers;
 
-import com.eldritchmod.entities.render.LayerPlayerAura;
-
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 

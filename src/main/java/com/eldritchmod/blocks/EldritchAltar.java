@@ -1,16 +1,13 @@
 package com.eldritchmod.blocks;
 
 import com.eldritchmod.Ref;
-import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.ItemsRegistry;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EldritchAltar extends BlockBase{

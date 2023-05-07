@@ -2,10 +2,8 @@ package com.eldritchmod.world;
 
 import java.util.Random;
 
-import com.eldritchmod.blocks.EuphoriumOre;
 import com.eldritchmod.init.BlocksRegistry;
 
-import akka.japi.Predicate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;

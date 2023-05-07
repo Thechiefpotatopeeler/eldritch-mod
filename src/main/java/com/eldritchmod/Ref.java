@@ -1,9 +1,6 @@
 package com.eldritchmod;
 
-import net.minecraft.client.resources.I18n;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.text.ITextComponent;
 
 public class Ref {
 
