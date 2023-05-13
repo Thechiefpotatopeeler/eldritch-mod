@@ -6,13 +6,13 @@ import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
-public abstract class ItemSwordBase extends ItemSword implements IRegisterable {
+public class ItemSwordBase extends ItemSword implements IRegisterable {
 
 	protected String name;
 	
-	public ItemSwordBase(ToolMaterial material, String name) {
+	public ItemSwordBase(ToolMaterial material, String name, CreativeTabs creativeTab) {
 		super(material);
-		
+		setCreativeTab(creativeTab);
 		this.name = name;
 		updateRegistryAndLocalizedName(name);
 	}

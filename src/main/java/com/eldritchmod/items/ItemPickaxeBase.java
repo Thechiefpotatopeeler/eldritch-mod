@@ -6,15 +6,14 @@ import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 
-public abstract class ItemPickaxeBase extends ItemPickaxe implements IRegisterable {
+public class ItemPickaxeBase extends ItemPickaxe implements IRegisterable {
 
 	protected String name;
 	
-	public ItemPickaxeBase(ToolMaterial material, String name) {
+	public ItemPickaxeBase(ToolMaterial material, String name, CreativeTabs creativeTab) {
 		super(material);
-		
 		this.name = name;
-
+		setCreativeTab(creativeTab);
 		updateRegistryAndLocalizedName(name);
 	}
 	

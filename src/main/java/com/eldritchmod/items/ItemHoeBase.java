@@ -9,11 +9,10 @@ import com.eldritchmod.Main;
 public class ItemHoeBase extends ItemHoe implements IRegisterable{
 
     protected String name;
-    public ItemHoeBase(ToolMaterial material, String name) {
+    public ItemHoeBase(ToolMaterial material, String name, CreativeTabs creativeTab) {
         super(material);
-        
         this.name=name;
-
+		setCreativeTab(creativeTab);
         updateRegistryAndLocalizedName(name);
     }
     

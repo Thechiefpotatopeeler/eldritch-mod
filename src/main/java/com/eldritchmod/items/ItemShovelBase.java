@@ -6,15 +6,14 @@ import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
 
-public abstract class ItemShovelBase extends ItemSpade implements IRegisterable {
+public class ItemShovelBase extends ItemSpade implements IRegisterable {
 
 	protected String name;
 	
-	public ItemShovelBase(ToolMaterial material, String name) {
+	public ItemShovelBase(ToolMaterial material, String name, CreativeTabs creativeTab) {
 		super(material);
-		
 		this.name = name;
-		
+		setCreativeTab(creativeTab);
 		updateRegistryAndLocalizedName(name);
 	}
 	
