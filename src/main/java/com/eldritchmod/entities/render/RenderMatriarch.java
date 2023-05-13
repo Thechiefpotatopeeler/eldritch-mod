@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderMatriarch extends RenderLiving<EntitySpiderMatriarch> {
 
-    public static final ResourceLocation TEXTURE = new ResourceLocation("eldritch_mod:textures/entity/matriarch.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation("eldritch:textures/entity/matriarch.png");
     //Sets the location for the texture
 
     public RenderMatriarch(RenderManager manager) {

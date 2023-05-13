@@ -9,9 +9,9 @@ import net.minecraft.util.ResourceLocation;
 public class RenderRedMoobloom extends RenderLiving<EntityRedMoobloom> {
 
 
-    public static final ResourceLocation TEXTURE_POPPY = new ResourceLocation("eldritch_mod:textures/entity/moobloom_poppy.png");
-    //public static final ResourceLocation TEXTURE_ALLIUM = new ResourceLocation("eldritch_mod:textures/entity/moobloom_allium.png");
-    //public static final ResourceLocation TEXTURE_ORCHID = new ResourceLocation("eldritch_mod:textures/entity/moobloom_orchid.png");
+    public static final ResourceLocation TEXTURE_POPPY = new ResourceLocation("eldritch:textures/entity/moobloom_poppy.png");
+    //public static final ResourceLocation TEXTURE_ALLIUM = new ResourceLocation("eldritch:textures/entity/moobloom_allium.png");
+    //public static final ResourceLocation TEXTURE_ORCHID = new ResourceLocation("eldritch:textures/entity/moobloom_orchid.png");
     //Gives all the locations of the textures for the moobloom.
 
     public RenderRedMoobloom(RenderManager manager) {

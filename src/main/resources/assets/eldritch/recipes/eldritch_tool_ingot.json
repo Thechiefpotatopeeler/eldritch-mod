@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eldritch:eldritch_shard"
+    },
+    {
+      "item": "eldritch:spider_fang"
+    }
+  ],
+  "result": {
+    "item": "eldritch:eldritch_tool_ingot"
+  }
+}

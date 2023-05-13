@@ -40,7 +40,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME, dependencies = "required-after:llibrary@[1.7.19,)" /*, updateJSON = Main.updateJSON)*/ )
 public class Main {
-	public static final String MOD_ID = "eldritch_mod";
+	public static final String MOD_ID = "eldritch";
 	public static final String VERSION = "1.3";
 	public static final String NAME = "Eldritch mod";
 	public static File config;

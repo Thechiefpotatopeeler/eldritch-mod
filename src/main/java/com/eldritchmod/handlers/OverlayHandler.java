@@ -9,7 +9,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class OverlayHandler extends Gui {
-    private static final ResourceLocation bar = new ResourceLocation("eldritch_mod", "textures/mana_bar.png");
+    private static final ResourceLocation bar = new ResourceLocation("eldritch", "textures/mana_bar.png");
     private int tex_width = 5, tex_height = 100;
 
     @SubscribeEvent

@@ -18,7 +18,7 @@ public class EuphoriumOre extends BlockBase {
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
         //System.out.println("Poonis spoondis willy wonkledis fjkdsljkl;asdjkl;dsjkl;asdjkfdsjk MArissa's tea party is pooing on the moon\nfdjkls Each peachj poobleombleding plubm, I piepoeoedededed Tomb bumb thumb, Tom thub here tyhjre, Tom Thumb everywhere, Tom Thumb in a trewe, Tom thumb in my fdjnklsdklfsjklpoopoopoopeepepepepepeppepepepepepepepfgvsadklhjn;akdlfdswjaljkl;akjl;fdsa");
-        return Item.getByNameOrId("eldritch_mod:euphorium_dust");
+        return Item.getByNameOrId("eldritch:euphorium_dust");
     }
 
     @Override

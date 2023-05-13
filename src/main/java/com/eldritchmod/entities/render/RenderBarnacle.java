@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderBarnacle extends RenderLiving<EntityBarnacle> {
 
-    public static final ResourceLocation TEXTURE = new ResourceLocation("eldritch_mod:textures/entity/barnacle.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation("eldritch:textures/entity/barnacle.png");
     //Sets the location for the texture
 
     public RenderBarnacle(RenderManager manager) {

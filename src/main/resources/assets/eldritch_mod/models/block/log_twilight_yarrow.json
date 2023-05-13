@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "eldritch_mod:blocks/log_twilight_yarrow_top",
-        "side": "eldritch_mod:blocks/log_twilight_yarrow"
-    }
-}

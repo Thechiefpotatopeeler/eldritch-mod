@@ -11,10 +11,10 @@ public class RenderYellowMoobloom extends RenderLiving<EntityYellowMoobloom> {
 
     public String variant;
 
-    public static final ResourceLocation TEXTURE_DANDELION = new ResourceLocation("eldritch_mod:textures/entity/moobloom_dandelion.png");
-    //public static final ResourceLocation TEXTURE_POPPY = new ResourceLocation("eldritch_mod:textures/entity/moobloom_rose.png");
-    //public static final ResourceLocation TEXTURE_ALLIUM = new ResourceLocation("eldritch_mod:textures/entity/moobloom_allium.png");
-    //public static final ResourceLocation TEXTURE_ORCHID = new ResourceLocation("eldritch_mod:textures/entity/moobloom_orchid.png");
+    public static final ResourceLocation TEXTURE_DANDELION = new ResourceLocation("eldritch:textures/entity/moobloom_dandelion.png");
+    //public static final ResourceLocation TEXTURE_POPPY = new ResourceLocation("eldritch:textures/entity/moobloom_rose.png");
+    //public static final ResourceLocation TEXTURE_ALLIUM = new ResourceLocation("eldritch:textures/entity/moobloom_allium.png");
+    //public static final ResourceLocation TEXTURE_ORCHID = new ResourceLocation("eldritch:textures/entity/moobloom_orchid.png");
     //Gives all the locations of the textures for the moobloom.
 
     public RenderYellowMoobloom(RenderManager manager) {

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "eldritch:log_twilight_yarrow" },
+        "axis=z":   { "model": "eldritch:log_twilight_yarrow", "x": 90 },
+        "axis=x":   { "model": "eldritch:log_twilight_yarrow", "x": 90, "y": 90 }
+    }
+}
