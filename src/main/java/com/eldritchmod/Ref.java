@@ -10,6 +10,9 @@ public class Ref {
 	public static final int ENTITY_RED_MOOBLOOM = 122;
 	public static final int ENTITY_POOBLOOM = 123;    
     public static final int ENTITY_BARNACLE = 124;
+
+    public static final int ENTITY_DWARF = 125;
+
     //Dimension IDs
     public static final int BACKROOMS = 2;
 

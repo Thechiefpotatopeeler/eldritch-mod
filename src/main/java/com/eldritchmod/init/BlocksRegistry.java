@@ -23,6 +23,7 @@ public class BlocksRegistry {
 	public static void register(final IForgeRegistry<Block> registry) {
 		for (final IRegisterable block : BLOCKS) {
 			registry.register((Block) block);
+			//System.out.println("Registered block: " + block.getName());
 	}
 		
 	}
@@ -31,7 +32,7 @@ public class BlocksRegistry {
 		for (final IRegisterable block : BLOCKS) {
 			switch (block.getName()) {
 				case "log_twilight_yarrow":
-				registry.register(((BlockLogBase) LogTwilightYarrow).createItemBlock());
+				registry.register(LogTwilightYarrow.createItemBlock());
 				break;
 			default:
 				registry.register(((BlockBase) block).createItemBlock());

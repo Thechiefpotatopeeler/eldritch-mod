@@ -2,11 +2,7 @@ package com.eldritchmod.init;
 
 import com.eldritchmod.Main;
 import com.eldritchmod.Ref;
-import com.eldritchmod.entities.EntityYellowMoobloom;
-import com.eldritchmod.entities.EntityPoobloom;
-import com.eldritchmod.entities.EntityRedMoobloom;
-import com.eldritchmod.entities.EntitySpiderMatriarch;
-import com.eldritchmod.entities.EntityBarnacle;
+import com.eldritchmod.entities.*;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -20,6 +16,7 @@ public class EntitiesRegistry { //This registers the entities, but doesn't actua
         registerEntity("redMoobloom", EntityRedMoobloom.class, Ref.ENTITY_RED_MOOBLOOM, 30, 16724787, 16645526);
         registerEntity("poobloom", EntityPoobloom.class, Ref.ENTITY_POOBLOOM, 30);
         registerEntity("barnacle", EntityBarnacle.class, Ref.ENTITY_BARNACLE, 30);
+        registerEntity("dwarf", EntityDwarf.class, Ref.ENTITY_DWARF, 30);
     } //It seems a bit over the top to have two of them, but it makes things a bit easier to use/read.
 
     private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int c1, int c2) {

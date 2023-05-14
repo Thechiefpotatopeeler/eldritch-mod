@@ -1,15 +1,7 @@
 package com.eldritchmod.handlers;
 
-import com.eldritchmod.entities.EntityYellowMoobloom;
-import com.eldritchmod.entities.EntityBarnacle;
-import com.eldritchmod.entities.EntityPoobloom;
-import com.eldritchmod.entities.EntityRedMoobloom;
-import com.eldritchmod.entities.EntitySpiderMatriarch;
-import com.eldritchmod.entities.render.RenderBarnacle;
-import com.eldritchmod.entities.render.RenderMatriarch;
-import com.eldritchmod.entities.render.RenderPoobloom;
-import com.eldritchmod.entities.render.RenderRedMoobloom;
-import com.eldritchmod.entities.render.RenderYellowMoobloom;
+import com.eldritchmod.entities.*;
+import com.eldritchmod.entities.render.*;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.renderer.entity.Render;
@@ -58,6 +50,14 @@ public class EntityRenderHandler {
             @Override
             public Render<? super EntityBarnacle> createRenderFor(RenderManager manager) {
                 return new RenderBarnacle(manager);
+            }
+        });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityDwarf.class,new IRenderFactory<EntityDwarf>(){
+
+            @Override
+            public Render<? super EntityDwarf> createRenderFor(RenderManager manager) {
+                return new RenderDwarf(manager);
             }
         });
     }
