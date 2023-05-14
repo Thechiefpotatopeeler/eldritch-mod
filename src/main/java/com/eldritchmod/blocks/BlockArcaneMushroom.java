@@ -3,11 +3,14 @@ package com.eldritchmod.blocks;
 import java.util.Random;
 
 import com.eldritchmod.Main;
+import ibxm.Player;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 public class BlockArcaneMushroom extends BlockBase implements IGrowable{
@@ -32,8 +35,11 @@ public class BlockArcaneMushroom extends BlockBase implements IGrowable{
     @Override
     public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
         //worldIn.getChunk(pos).addEntity(new EntitySpiderMatriarch(worldIn));
-        System.out.println("Shit's not working working betch");
-    }
+        for (Entity player : worldIn.getPlayers(Entity.class, (p) -> p.getDistanceSq(pos) < 50 * 50)) {
+            player.sendMessage(new TextComponentString("That was a bad idea, thank god this feature is still WIP"));
+        }
+            
+        }
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
