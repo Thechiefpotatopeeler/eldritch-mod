@@ -7,11 +7,13 @@ item.eldritch_shovel.name=Eldritch Shovel
 item.eldritch_hoe.name=Eldritch hoe
 item.euphorium_dust.name=Euphorium dust
 item.spider_fang.name=Spider fang
+item.eldritch_tool_ingot.name=Tool grade Eldritch
 //Blocks
 tile.eldritch_block.name=Block of eldritch
 tile.euphorium_ore.name=Euphorium ore
 tile.log_twilight_yarrow.name=Twilight yarrow log
 tile.eldritch_altar.name=Eldritch altar
+tile.arcane_mushroom.name=Arcane mushroom
 //Creative tabs
 itemGroup.eldritchmodtools=Eldritch mod tools
 itemGroup.eldritchmodmaterials=Eldritch mod materials
@@ -20,6 +22,9 @@ death.attack.messing_with_arcane=%1$s's tomfoolery with the arcane went too far
 //Entities
 entity.matriarch.name=Spider Matriarch
 entity.yellowMoobloom.name=Yellow moobloom
-entity.redMoobloom.name= Red moobloom
+entity.redMoobloom.name=Red moobloom
+entity.poobloom.name=Poobloom
+entity.dwarf.name=Dwarf
+entity.crocodemon.name=Crocodemon
 //Biomes (I hope)
 biome.eldritch_forest.name=Eldritch forest

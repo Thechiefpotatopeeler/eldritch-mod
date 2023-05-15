@@ -12,6 +12,8 @@ public class Ref {
     public static final int ENTITY_BARNACLE = 124;
 
     public static final int ENTITY_DWARF = 125;
+    public static final int ENTITY_CROCODEMON = 126;
+
 
     //Dimension IDs
     public static final int BACKROOMS = 2;

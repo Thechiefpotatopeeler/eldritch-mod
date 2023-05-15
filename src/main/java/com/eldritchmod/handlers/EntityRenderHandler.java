@@ -60,5 +60,13 @@ public class EntityRenderHandler {
                 return new RenderDwarf(manager);
             }
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityCrocodemon.class,new IRenderFactory<EntityCrocodemon>(){
+
+            @Override
+            public Render<? super EntityCrocodemon> createRenderFor(RenderManager manager) {
+                return new RenderCrocodemon(manager);
+            }
+        });
     }
 }   

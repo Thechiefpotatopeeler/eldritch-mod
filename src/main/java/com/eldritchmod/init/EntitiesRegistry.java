@@ -17,6 +17,7 @@ public class EntitiesRegistry { //This registers the entities, but doesn't actua
         registerEntity("poobloom", EntityPoobloom.class, Ref.ENTITY_POOBLOOM, 30);
         registerEntity("barnacle", EntityBarnacle.class, Ref.ENTITY_BARNACLE, 30);
         registerEntity("dwarf", EntityDwarf.class, Ref.ENTITY_DWARF, 30);
+        registerEntity("crocodemon", EntityCrocodemon.class, Ref.ENTITY_CROCODEMON, 30);
     } //It seems a bit over the top to have two of them, but it makes things a bit easier to use/read.
 
     private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int c1, int c2) {
