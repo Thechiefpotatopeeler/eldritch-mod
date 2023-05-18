@@ -29,7 +29,7 @@ public class ModelBarnacle extends ModelBase {
 		textureHeight = 128;
 
 		All = new ModelRenderer(this);
-		All.setRotationPoint(0.0F, 24.0F, -6.0F);
+		All.setRotationPoint(0.0F, 18.0F, -6.0F);
 		setRotationAngle(All, -1.5708F, 0.0F, 0.0F);
 		
 

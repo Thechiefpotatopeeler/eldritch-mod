@@ -1,6 +1,10 @@
 package com.eldritchmod;
 
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.village.MerchantRecipeList;
+import net.minecraft.village.MerchantRecipe;
 
 public class Ref {
 
@@ -20,4 +24,11 @@ public class Ref {
 
     //Damage Sources
     public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor().setMagicDamage();
+
+    //Entity trades
+    public static MerchantRecipeList getDwarfTrades() {
+        MerchantRecipeList DWARF_TRADES = new MerchantRecipeList();
+        DWARF_TRADES.add(new MerchantRecipe(new ItemStack(Items.EMERALD, 1), new ItemStack(Items.IRON_INGOT)));
+        return DWARF_TRADES;
+    }
 }
