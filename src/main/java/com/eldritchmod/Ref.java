@@ -18,6 +18,8 @@ public class Ref {
     public static final int ENTITY_DWARF = 125;
     public static final int ENTITY_CROCODEMON = 126;
 
+    public static final int ENTITY_HATCHABLE_EGG = 127;
+
 
     //Dimension IDs
     public static final int BACKROOMS = 2;

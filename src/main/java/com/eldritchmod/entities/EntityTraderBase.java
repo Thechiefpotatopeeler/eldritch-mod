@@ -1,5 +1,6 @@
 package com.eldritchmod.entities;
 
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.INpc;
@@ -17,7 +18,7 @@ import com.eldritchmod.Main;
 
 import javax.annotation.Nullable;
 
-public class EntityTraderBase extends EntityLiving implements IMerchant, INpc {
+public class EntityTraderBase extends EntityCreature implements IMerchant, INpc {
 
     public MerchantRecipeList trades;
     public EntityAITasks tasks;
@@ -37,7 +38,7 @@ public class EntityTraderBase extends EntityLiving implements IMerchant, INpc {
 
             if (!this.world.isRemote && !this.trades.isEmpty()) {
                 this.setCustomer(playerIn);
-                //playerIn.openGui(getWorld(), 68, this.world, this.getEntityId(), 0, 0);
+                //playerIn.openGui(getWorld(), 0, this.world, this.getEntityId(), 0, 0);
             }
 
             return true;

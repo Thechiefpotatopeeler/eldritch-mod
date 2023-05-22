@@ -11,7 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-//I borrowed this code from Mojang, it was kinda hard to get working, so I ended up just missing a flower
+//I half borrowed this code from Mojang, it was kinda hard to get working, so I ended up just missing a flower
 
 @SideOnly(Side.CLIENT)
 public class RedMoobloomFlowerLayer implements LayerRenderer<EntityRedMoobloom> {

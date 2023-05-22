@@ -1,5 +1,6 @@
 package com.eldritchmod.entities;
 
+import com.eldritchmod.entities.ai.EntityAILaySpiderEgg;
 import com.eldritchmod.handlers.LootTableHandler;
 
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -19,6 +20,12 @@ public class EntitySpiderMatriarch extends EntitySpider {
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(50.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5D);
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5.0D);
+    }
+
+    @Override
+    protected void initEntityAI() {
+        super.initEntityAI();
+        this.tasks.addTask(1, new EntityAILaySpiderEgg(this));
     }
     @Override
     protected ResourceLocation getLootTable() {

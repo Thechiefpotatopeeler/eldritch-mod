@@ -3,6 +3,7 @@ package com.eldritchmod.entities.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 /**
  * ModelPlayer - Either Mojang or a mod author
@@ -86,5 +87,20 @@ public class ModelDwarf extends ModelBase {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }
+
+    @Override
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
+        this.Arm_1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.0F * limbSwingAmount;
+        this.Leg_2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.0F * limbSwingAmount;
+        this.Leg_1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.0F * limbSwingAmount;
+        this.Arm_2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.0F * limbSwingAmount;
+        this.Body.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 0.2F * limbSwingAmount;
+        this.Body.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 0.2F * limbSwingAmount;
+        copyModelAngles(this.Arm_1, this.Arm_1_l2);
+        copyModelAngles(this.Arm_2, this.Arm_2_l2);
+        copyModelAngles(this.Leg_1, this.Leg_1_l2);
+        copyModelAngles(this.Leg_2, this.Leg_2_l2);
+        copyModelAngles(this.Body, this.Body_l2);
     }
 }

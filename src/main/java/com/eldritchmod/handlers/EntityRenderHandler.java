@@ -68,5 +68,13 @@ public class EntityRenderHandler {
                 return new RenderCrocodemon(manager);
             }
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityHatchableEgg.class,new IRenderFactory<EntityHatchableEgg>(){
+
+            @Override
+            public Render<? super EntityHatchableEgg> createRenderFor(RenderManager manager) {
+                return new RenderHatchableEgg(manager);
+            }
+        });
     }
 }   
