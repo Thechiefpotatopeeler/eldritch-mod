@@ -2,6 +2,7 @@ package com.eldritchmod.entities;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -10,20 +11,28 @@ public class EntityHatchableEgg extends EntityLiving {
 
     public final EntitySpider SPIDER;
 
-    private int timeUntilHatch = 1000;
+    private int cracked = 0;
     public EntityHatchableEgg(World worldIn) {
         super(worldIn);
         SPIDER = new EntitySpider(worldIn);
     }
 
     @Override
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1.0D);
+    }
+
+    @Override
     public void onUpdate() {
         super.onUpdate();
-        if (this.timeUntilHatch > 0) {
-            --this.timeUntilHatch;
-        } else {
-            this.hatch();
-        }
+        if (this.ticksExisted > 250) this.cracked = 1;
+        if(this.ticksExisted >500) this.cracked = 2;
+        if (this.ticksExisted > 750) this.hatch();
+    }
+
+    public int getHatchedness(){
+        return this.cracked;
     }
 
     public void hatch(){
