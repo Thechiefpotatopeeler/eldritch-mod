@@ -1,17 +1,23 @@
 package com.eldritchmod.blocks;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import com.eldritchmod.Main;
+import com.eldritchmod.Ref;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.items.IRegisterable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class BlockBase extends Block implements IRegisterable {
 
@@ -57,4 +63,13 @@ public class BlockBase extends Block implements IRegisterable {
     public String getName() {
         return this.name;
     }
+
+	@Override
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		for(Map.Entry<String,String> entry : Ref.ITEM_BASE_TOOLTIPS.entrySet()){
+			if(entry.getKey().equals(this.name))
+				tooltip.add(entry.getValue());
+		}
+		//if(Ref.ITEM_BASE_TOOLTIPS.containsKey(this.name)) tooltip.add(Ref.ITEM_BASE_TOOLTIPS.get(stack.getTranslationKey()));
+	}
 }

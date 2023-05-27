@@ -12,6 +12,7 @@ import com.eldritchmod.handlers.CapabilityHandler;
 import com.eldritchmod.init.BlocksRegistry;
 import com.eldritchmod.init.EntitiesRegistry;
 import com.eldritchmod.init.ItemsRegistry;
+import com.eldritchmod.init.PotionRegistry;
 import com.eldritchmod.proxy.CommonProxy;
 import com.eldritchmod.tabs.*;
 import com.eldritchmod.world.OreGen;
@@ -66,6 +67,7 @@ public class Main {
 		EntitiesRegistry.registerEntities();
 		EntityRenderHandler.registerEntityRenders();
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
+		PotionRegistry.registerPotions();
 		//BiomeRegistry.registerBiomes();
 		//DimensionRegistry.registerDimensions();
 		
@@ -102,7 +104,6 @@ public class Main {
 			BlocksRegistry.register(event.getRegistry());
 		
 		}
-		
 		@SubscribeEvent
 		public static void registerItem(RegistryEvent.Register<Item> event) throws Exception {
 			try {
