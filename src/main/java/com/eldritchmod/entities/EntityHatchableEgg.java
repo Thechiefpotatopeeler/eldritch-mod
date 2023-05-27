@@ -15,6 +15,7 @@ public class EntityHatchableEgg extends EntityLiving {
     public EntityHatchableEgg(World worldIn) {
         super(worldIn);
         SPIDER = new EntitySpider(worldIn);
+        this.setSize(0.4F, 0.4F);
     }
 
     @Override

@@ -3,7 +3,10 @@ package com.eldritchmod.entities;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
+import net.minecraft.entity.monster.AbstractIllager;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 
 import net.minecraft.world.World;
@@ -11,6 +14,7 @@ import net.minecraft.world.World;
 public class EntityCrocodemon extends EntityMob {
     public EntityCrocodemon(World worldIn) {
         super(worldIn);
+        this.setSize(1.8F, 2.0F);
     }
 
     protected void initEntityAI(){
@@ -19,7 +23,9 @@ public class EntityCrocodemon extends EntityMob {
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(4, new EntityAIAttackMelee(this, 1.0D, true));
         targetTasks.addTask(1, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, false));
-        targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityCreature.class, false));
+        targetTasks.addTask(3, new EntityAINearestAttackableTarget<>(this, EntityAnimal.class, false));
+        targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityVillager.class, false));
+        targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, AbstractIllager.class, false));
     }
     @Override
     protected void applyEntityAttributes() {
