@@ -33,8 +33,8 @@ public class ManaHandler {
                 break;
             }
         mana.set(100);
-        System.out.println("Player mana: " + mana.getMana());
-        System.out.println(player);
+        //System.out.println("Player mana: " + mana.getMana());
+        //System.out.println(player);
         
         player.sendMessage(new TextComponentString("Your mana is: " + mana.getMana() + " and your magic type is: " + mana.getMagicType()));
     }

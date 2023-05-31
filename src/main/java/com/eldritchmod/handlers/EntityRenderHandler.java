@@ -76,5 +76,13 @@ public class EntityRenderHandler {
                 return new RenderHatchableEgg(manager);
             }
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityGhust.class,new IRenderFactory<EntityGhust>(){
+
+            @Override
+            public Render<? super EntityGhust> createRenderFor(RenderManager manager) {
+                return new RenderGhust(manager);
+            }
+        });
     }
 }   

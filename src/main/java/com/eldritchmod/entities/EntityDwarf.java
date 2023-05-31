@@ -31,7 +31,7 @@ public class EntityDwarf extends EntityCreature implements IMerchant {
         this.tasks.addTask(2, new EntityAIWanderAvoidWater(this, 0.8));
         this.tasks.addTask(6, new EntityAILookIdle(this));
         this.tasks.addTask(7, new EntityAIWander(this, 0.8));
-        this.tasks.addTask(1,new EntityAIAttackMelee(this,1.0,true));
+        this.tasks.addTask(3, new EntityAIAttackMelee(this,1.0,true));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
     }
 

@@ -1,92 +1,136 @@
 package com.eldritchmod.entities;
 
-import com.google.common.base.Optional;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityFlying;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.IEntityOwnable;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.server.management.PreYggdrasilConverter;
+import net.minecraft.entity.*;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.UUID;
 
-public class EntityGhust extends EntityFlying implements IEntityOwnable {
+public class EntityGhust extends EntityFlying {
 
-    protected static DataParameter<Byte> TAMED;
-    protected static DataParameter<Optional<UUID>> OWNER_UNIQUE_ID;
+    private EntityPlayer following;
     public EntityGhust(World worldIn) {
         super(worldIn);
     }
 
     protected void entityInit() {
         super.entityInit();
-        this.dataManager.register(TAMED, (byte)0);
-        this.dataManager.register(OWNER_UNIQUE_ID, Optional.absent());
+        this.setSize(1.0F, 2.0F);
     }
 
-    public void writeEntityToNBT(NBTTagCompound p_writeEntityToNBT_1_) {
-        super.writeEntityToNBT(p_writeEntityToNBT_1_);
-        if (this.getOwnerId() == null) {
-            p_writeEntityToNBT_1_.setString("OwnerUUID", "");
-        } else {
-            p_writeEntityToNBT_1_.setString("OwnerUUID", this.getOwnerId().toString());
-        }
+    @Override
+    public void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(16.0D);
     }
 
-    public void readEntityFromNBT(NBTTagCompound p_readEntityFromNBT_1_) {
-        super.readEntityFromNBT(p_readEntityFromNBT_1_);
-        String lvt_2_2_;
-        if (p_readEntityFromNBT_1_.hasKey("OwnerUUID", 8)) {
-            lvt_2_2_ = p_readEntityFromNBT_1_.getString("OwnerUUID");
-        } else {
-            String lvt_3_1_ = p_readEntityFromNBT_1_.getString("Owner");
-            lvt_2_2_ = PreYggdrasilConverter.convertMobOwnerIfNeeded(this.getServer(), lvt_3_1_);
-        }
+    @Override
+    protected void initEntityAI() {
+        super.initEntityAI();
+    }
 
-        if (!lvt_2_2_.isEmpty()) {
-            try {
-                this.setOwnerId(UUID.fromString(lvt_2_2_));
-                this.setTamed(true);
-            } catch (Throwable var4) {
-                this.setTamed(false);
+    @Nullable
+    public EntityPlayer getFollowing() {
+        return following;
+    }
+
+    @Override
+    public boolean canPassengerSteer(){
+        return true;
+    }
+
+    @Override
+    public void onUpdate(){
+        super.onUpdate();
+    }
+
+    public void shootFireBall(){
+        Vec3d vec3d = this.getLook(1.0F);
+        EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this, vec3d.x, vec3d.y, vec3d.z);
+        entitylargefireball.explosionPower = 1;
+        entitylargefireball.posX = this.posX + vec3d.x * 4.0D;
+        entitylargefireball.posY = this.posY + (double)(this.height / 2.0F) + 0.5D;
+        entitylargefireball.posZ = this.posZ + vec3d.z * 4.0D;
+        world.spawnEntity(entitylargefireball);
+    }
+
+
+    public boolean processInteract(EntityPlayer playerIn, EnumHand hand) {
+        if (!super.processInteract(playerIn, hand)) {
+            ItemStack itemstack = playerIn.getHeldItem(hand);
+
+            if (itemstack.getItem() == Items.NAME_TAG) {
+                itemstack.interactWithEntity(playerIn, this, hand);
+                return true;
             }
+            else if (!this.isBeingRidden()) {
+                if (!this.world.isRemote) {
+                    playerIn.startRiding(this);
+                }
+                return true;
+            }
+            else if(playerIn.isSneaking()) {
+                this.following = playerIn;
+            }
+            else return false;
         }
+        return super.processInteract(playerIn, hand);
     }
 
-    public void setTamed(boolean p_setTamed_1_) {
-        byte lvt_2_1_ = (Byte)this.dataManager.get(TAMED);
-        if (p_setTamed_1_) {
-            this.dataManager.set(TAMED, (byte)(lvt_2_1_ | 4));
-        } else {
-            this.dataManager.set(TAMED, (byte)(lvt_2_1_ & -5));
+    public void travel(float strafe, float vertical, float forward)
+    {
+        Entity entity = this.getPassengers().isEmpty() ? null : (Entity)this.getPassengers().get(0);
+
+        if (this.isBeingRidden())
+        {
+            this.rotationYaw = entity.rotationYaw;
+            this.prevRotationYaw = this.rotationYaw;
+            this.rotationPitch = entity.rotationPitch * 0.5F;
+            this.setRotation(this.rotationYaw, this.rotationPitch);
+            this.renderYawOffset = this.rotationYaw;
+            this.rotationYawHead = this.rotationYaw;
+            this.stepHeight = 1.0F;
+            this.jumpMovementFactor = this.getAIMoveSpeed() * 0.1F;
+
+            if (this.canPassengerSteer())
+            {
+                float f = (float)this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue() * 1.2F;
+                this.setAIMoveSpeed(f);
+                float f2 = MathHelper.sin(this.rotationPitch * -0.017453292F);
+                super.travel(0.0F, f2, 1.0F);
+            }
+            else
+            {
+                this.motionX = 0.0D;
+                this.motionY = 0.0D;
+                this.motionZ = 0.0D;
+            }
+
+            this.prevLimbSwingAmount = this.limbSwingAmount;
+            double d1 = this.posX - this.prevPosX;
+            double d0 = this.posZ - this.prevPosZ;
+            float f1 = MathHelper.sqrt(d1 * d1 + d0 * d0) * 4.0F;
+
+            if (f1 > 1.0F)
+            {
+                f1 = 1.0F;
+            }
+
+            this.limbSwingAmount += (f1 - this.limbSwingAmount) * 0.4F;
+            this.limbSwing += this.limbSwingAmount;
         }
-
-        this.setupTamedAI();
-    }
-
-    protected void setupTamedAI() {
-    }
-    @Nullable
-    @Override
-    public UUID getOwnerId() {
-        return (UUID)((Optional)this.dataManager.get(OWNER_UNIQUE_ID)).orNull();
-    }
-
-    public void setOwnerId(@Nullable UUID p_setOwnerId_1_) {
-        this.dataManager.set(OWNER_UNIQUE_ID, Optional.fromNullable(p_setOwnerId_1_));
-    }
-
-    @Nullable
-    @Override
-    public EntityLivingBase getOwner() {
-        try {
-            UUID owner = this.getOwnerId();
-            return owner == null ? null : this.world.getPlayerEntityByUUID(owner);
-        } catch (IllegalArgumentException var2) {
-            return null;
+        else
+        {
+            this.stepHeight = 0.5F;
+            this.jumpMovementFactor = 0.02F;
+            super.travel(strafe, vertical, forward);
         }
     }
 }
