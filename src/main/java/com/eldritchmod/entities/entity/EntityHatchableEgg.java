@@ -1,10 +1,8 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySpider;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 public class EntityHatchableEgg extends EntityLiving {

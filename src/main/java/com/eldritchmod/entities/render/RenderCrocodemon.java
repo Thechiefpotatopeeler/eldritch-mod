@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityCrocodemon;
+import com.eldritchmod.entities.entity.EntityCrocodemon;
 import com.eldritchmod.entities.model.ModelCrocodemon;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

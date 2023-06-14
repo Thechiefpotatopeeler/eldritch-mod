@@ -1,4 +1,4 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity.dwarf;
 
 import com.eldritchmod.Ref;
 import net.minecraft.entity.EntityCreature;

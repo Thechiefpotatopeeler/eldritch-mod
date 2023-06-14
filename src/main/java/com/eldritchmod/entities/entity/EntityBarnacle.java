@@ -1,4 +1,4 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity;
 
 import net.minecraft.entity.passive.EntitySquid;
 import net.minecraft.world.World;

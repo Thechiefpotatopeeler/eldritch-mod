@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityBarnacle;
+import com.eldritchmod.entities.entity.EntityBarnacle;
 
 import com.eldritchmod.entities.model.ModelBarnacle;
 import net.minecraft.client.renderer.entity.RenderLiving;

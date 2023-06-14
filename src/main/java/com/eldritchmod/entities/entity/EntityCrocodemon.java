@@ -1,6 +1,5 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity;
 
-import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.AbstractIllager;

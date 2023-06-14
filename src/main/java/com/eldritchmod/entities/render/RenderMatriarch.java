@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntitySpiderMatriarch;
+import com.eldritchmod.entities.entity.EntitySpiderMatriarch;
 
 import com.eldritchmod.entities.model.ModelMatriarch;
 import net.minecraft.client.renderer.entity.RenderLiving;

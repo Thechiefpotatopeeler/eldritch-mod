@@ -1,4 +1,4 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity.moobloom;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.passive.EntityCow;

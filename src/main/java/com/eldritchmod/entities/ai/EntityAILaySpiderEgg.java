@@ -1,11 +1,8 @@
 package com.eldritchmod.entities.ai;
 
-import com.eldritchmod.entities.EntityHatchableEgg;
-import com.eldritchmod.entities.EntitySpiderMatriarch;
-import net.minecraft.entity.Entity;
+import com.eldritchmod.entities.entity.EntityHatchableEgg;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.player.EntityPlayer;
 
 public class EntityAILaySpiderEgg extends EntityAIBase {

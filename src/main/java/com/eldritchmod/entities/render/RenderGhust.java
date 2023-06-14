@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityGhust;
+import com.eldritchmod.entities.entity.EntityGhust;
 import com.eldritchmod.entities.model.ModelGhust;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

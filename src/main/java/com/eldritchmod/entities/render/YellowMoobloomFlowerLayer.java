@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityYellowMoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityYellowMoobloom;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;

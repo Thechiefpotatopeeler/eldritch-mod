@@ -1,8 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityDwarf;
-import com.eldritchmod.entities.EntityHatchableEgg;
-import com.eldritchmod.entities.model.ModelDwarf;
+import com.eldritchmod.entities.entity.EntityHatchableEgg;
 import com.eldritchmod.entities.model.ModelHatchableEgg;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

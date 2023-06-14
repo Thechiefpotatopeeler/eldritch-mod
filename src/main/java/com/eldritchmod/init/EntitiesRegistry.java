@@ -2,8 +2,12 @@ package com.eldritchmod.init;
 
 import com.eldritchmod.Main;
 import com.eldritchmod.Ref;
-import com.eldritchmod.entities.*;
 
+import com.eldritchmod.entities.entity.*;
+import com.eldritchmod.entities.entity.dwarf.EntityDwarf;
+import com.eldritchmod.entities.entity.moobloom.EntityPoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityRedMoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityYellowMoobloom;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;

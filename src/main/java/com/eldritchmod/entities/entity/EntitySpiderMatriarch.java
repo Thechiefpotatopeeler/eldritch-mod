@@ -1,13 +1,12 @@
-package com.eldritchmod.entities;
+package com.eldritchmod.entities.entity;
 
 import com.eldritchmod.entities.ai.EntityAILaySpiderEgg;
+import com.eldritchmod.entities.entity.dwarf.EntityDwarf;
 import com.eldritchmod.handlers.LootTableHandler;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
-import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySpider;
-import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;

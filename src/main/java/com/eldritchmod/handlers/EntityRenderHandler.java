@@ -1,6 +1,10 @@
 package com.eldritchmod.handlers;
 
-import com.eldritchmod.entities.*;
+import com.eldritchmod.entities.entity.*;
+import com.eldritchmod.entities.entity.dwarf.EntityDwarf;
+import com.eldritchmod.entities.entity.moobloom.EntityPoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityRedMoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityYellowMoobloom;
 import com.eldritchmod.entities.render.*;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;

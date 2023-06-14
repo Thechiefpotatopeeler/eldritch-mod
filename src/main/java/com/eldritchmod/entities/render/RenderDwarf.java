@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityDwarf;
+import com.eldritchmod.entities.entity.dwarf.EntityDwarf;
 import com.eldritchmod.entities.model.ModelDwarf;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

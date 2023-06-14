@@ -45,5 +45,6 @@ public class Ref {
     	ITEM_BASE_TOOLTIPS.put("dried_arcane_mushroom", "I wouldn't eat that if I were you");
     	ITEM_BASE_TOOLTIPS.put("arcane_mushroom", "It looks like you could dry it and consume it in a perfectly legal, recreational manner");
         ITEM_BASE_TOOLTIPS.put("euphorium_apple", "You are reminded of a golden apple but this is somehow different");
+        ITEM_BASE_TOOLTIPS.put("semen_bucket","We don't have a cow");
     }
 }

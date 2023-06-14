@@ -27,7 +27,7 @@ public class ItemsRegistry {
 	public static final ItemHoeBase EldritchHoe = new ItemHoeBase(ELDRITCH_TOOL_MATERIAL,"eldritch_hoe", Main.eldritchmodtools);
 	public static final ItemBase EuphoriumDust = new ItemBase("euphorium_dust", Main.eldritchmodmaterials);
 	public static final ItemBase SpiderFang = new ItemBase("spider_fang", Main.eldritchmodmaterials);
-
+	public static final ItemBase SemenBucket = new ItemBase("semen_bucket", Main.eldritchmodmaterials);
 	public static final ItemFoodBase EuphoriumApple = new ItemFoodBase("euphorium_apple", 4,  false);
 
 	public static final ItemFoodBase DriedArcaneMushroom = new ItemFoodBase("dried_arcane_mushroom", 4,  false);

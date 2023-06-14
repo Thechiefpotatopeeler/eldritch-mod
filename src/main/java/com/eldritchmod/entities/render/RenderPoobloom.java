@@ -1,6 +1,6 @@
 package com.eldritchmod.entities.render;
 
-import com.eldritchmod.entities.EntityPoobloom;
+import com.eldritchmod.entities.entity.moobloom.EntityPoobloom;
 import com.eldritchmod.entities.model.ModelMoobloom;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
