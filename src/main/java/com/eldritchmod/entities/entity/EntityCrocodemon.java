@@ -16,6 +16,7 @@ public class EntityCrocodemon extends EntityMob {
         this.setSize(1.8F, 2.0F);
     }
 
+    @Override
     protected void initEntityAI(){
         this.tasks.addTask(1, new EntityAISwimming(this));
         //this.tasks.addTask(3, new EntityAILeapAtTarget(this, 0.4F));

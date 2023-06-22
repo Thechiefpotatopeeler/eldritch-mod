@@ -31,6 +31,7 @@ entity.redMoobloom.name=Red moobloom
 entity.poobloom.name=Poobloom
 entity.dwarf.name=Dwarf
 entity.crocodemon.name=Crocodemon
+entity.thundercock.name=Thundercock
 
 //Biomes (I hope)
 biome.eldritch_forest.name=Eldritch forest

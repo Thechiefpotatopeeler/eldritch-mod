@@ -24,6 +24,9 @@ public class Ref {
 
     public static final int ENTITY_GHUST = 128;
 
+    public static final int ENTITY_THUNDERCOCK = 129;
+
+
 
 
     //Dimension IDs

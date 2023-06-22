@@ -88,5 +88,12 @@ public class EntityRenderHandler {
                 return new RenderGhust(manager);
             }
         });
+        RenderingRegistry.registerEntityRenderingHandler(EntityThundercock.class,new IRenderFactory<EntityThundercock>(){
+
+            @Override
+            public Render<? super EntityThundercock> createRenderFor(RenderManager manager) {
+                return new RenderThundercock(manager);
+            }
+        });
     }
 }   
