@@ -14,6 +14,7 @@ public class OverlayHandler extends Gui {
 
     @SubscribeEvent
     public void renderOverlay(RenderGameOverlayEvent event){
+        if (!ConfigHandler.enableManaOverlay||!ConfigHandler.enableMana) return; //Checks if the config allows the overlay to be drawn
         if (event.getType() == RenderGameOverlayEvent.ElementType.TEXT){
             Minecraft mc = Minecraft.getMinecraft();
             mc.renderEngine.bindTexture(bar);

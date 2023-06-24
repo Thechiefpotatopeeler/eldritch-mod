@@ -1,6 +1,6 @@
 package com.eldritchmod.handlers;
 
-import com.eldritchmod.entities.entity.EntityGhust;
+import com.eldritchmod.entity.entity.EntityGhust;
 import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
