@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class Ref {
 
-    //Entity IDs
+    //Entity IDs (moved to config)
     public static final int ENTITY_MATRIARCH = 120;
     public static final int ENTITY_YELLOW_MOOBLOOM = 121;
 	public static final int ENTITY_RED_MOOBLOOM = 122;
@@ -50,4 +50,9 @@ public class Ref {
         ITEM_BASE_TOOLTIPS.put("euphorium_apple", "You are reminded of a golden apple but this is somehow different");
         ITEM_BASE_TOOLTIPS.put("semen_bucket","We don't have a cow");
     }
+
+    //GUI Ids
+
+    public static final int GUI_MANA = 1;
+
 }

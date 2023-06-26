@@ -1,5 +1,7 @@
 package com.eldritchmod.handlers;
 
+import com.eldritchmod.Main;
+import com.eldritchmod.Ref;
 import com.eldritchmod.entity.entity.EntityGhust;
 import com.eldritchmod.init.ItemsRegistry;
 import net.minecraft.entity.passive.EntityCow;
@@ -21,6 +23,8 @@ public class InGameHandler {
         EntityPlayer player = event.getEntityPlayer();
         if(player.getRidingEntity() instanceof EntityGhust){
             ((EntityGhust) player.getRidingEntity()).shootFireBall();
+        }
+        if(player.getHeldItemMainhand().getItem() == ItemsRegistry.SemenBucket){
         }
     }
 

@@ -18,7 +18,7 @@ public class CapabilityHandler{
     
     @SubscribeEvent
     public void attachCapability(AttachCapabilitiesEvent<Entity> event) {
-        if (event.getObject() instanceof EntityPlayer) { 
+        if (event.getObject() instanceof EntityPlayer && ConfigHandler.enableMana) {
             event.addCapability(MANA_CAP, new ManaProvider());
             //System.out.println("attached mana capability"); This was the only sensible debug message I could make
         }

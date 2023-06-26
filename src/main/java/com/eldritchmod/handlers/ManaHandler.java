@@ -12,16 +12,13 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 public class ManaHandler {
     @SubscribeEvent
     public void onPlayerLogsIn(PlayerLoggedInEvent event) {
+        if(!ConfigHandler.enableMana) return;
         //This code will run whenever a player logs in, then set and tell them their current mana level.
         EntityPlayer player = event.player;
         IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
         switch (mana.getMagicType()) {
             case ELDRITCH_SORCERER:
-                mana.set(150);
-                break;
             case LIFE_GIVER:
-                mana.set(150);
-                break;
             case NECROMANCER:
                 mana.set(150);
                 break;
@@ -32,7 +29,6 @@ public class ManaHandler {
                 mana.set(100);
                 break;
             }
-        mana.set(100);
         //System.out.println("Player mana: " + mana.getMana());
         //System.out.println(player);
         
