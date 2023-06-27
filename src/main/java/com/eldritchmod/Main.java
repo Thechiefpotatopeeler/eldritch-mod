@@ -1,5 +1,7 @@
 package com.eldritchmod;
 
+import com.eldritchmod.command.CommandDisplayManaBar;
+import com.eldritchmod.command.CommandEnableMana;
 import com.eldritchmod.data.IMana;
 import com.eldritchmod.data.Mana;
 import com.eldritchmod.data.ManaStorage;
@@ -88,7 +90,7 @@ public class Main {
 	
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event) {
-		
+		RegistrationHandler.serverRegistries(event);
 	}
 	
 	/**
@@ -126,7 +128,11 @@ public class Main {
 			ItemsRegistry.registerModels();
 			BlocksRegistry.registerModels();
 		}
-		
+
+		public static void serverRegistries(FMLServerStartingEvent event) {
+			event.registerServerCommand(new CommandDisplayManaBar());
+			event.registerServerCommand(new CommandEnableMana());
+		}
 		
 	}
 }

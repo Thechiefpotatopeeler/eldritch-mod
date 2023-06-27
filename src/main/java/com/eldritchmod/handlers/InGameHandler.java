@@ -33,8 +33,6 @@ public class InGameHandler {
         EntityPlayer player = event.getEntityPlayer();
         ItemStack itemstack = player.getHeldItemMainhand();
         double rand = Math.random()*4;
-        System.out.println(rand);
-
         if(event.getTarget() instanceof EntityCow && itemstack.getItem() == Items.BUCKET && !player.capabilities.isCreativeMode && !((EntityCow)event.getTarget()).isChild()&&rand<=1.0D){
             player.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
             itemstack.shrink(1);

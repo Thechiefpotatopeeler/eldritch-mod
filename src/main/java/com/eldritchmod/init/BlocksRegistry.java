@@ -15,7 +15,7 @@ public class BlocksRegistry {
 	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
 	public static final BlockLogBase LogTwilightYarrow = new BlockLogBase("log_twilight_yarrow");
 	public static final EldritchAltar EldritchAltar = new EldritchAltar("eldritch_altar");
-	public static final BlockGargoyleStatue GargoyleStatueBlock = new BlockGargoyleStatue("gargoyle_statue_block");
+	public static final BlockGargoyleStatue GargoyleStatueBlock = new BlockGargoyleStatue("gargoyle_statue");
 	public static final BlockArcaneMushroom ArcaneMushroom = new BlockArcaneMushroom("arcane_mushroom");
 
 

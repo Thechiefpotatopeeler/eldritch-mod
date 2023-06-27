@@ -1,4 +1,4 @@
-package com.eldritchmod.entity;
+package com.eldritchmod.entity.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityMob;

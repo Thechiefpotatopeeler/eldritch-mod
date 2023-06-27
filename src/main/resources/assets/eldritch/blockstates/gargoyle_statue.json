@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "eldritch:gargoyle_statue" },
+        "facing=south": { "model": "eldritch:gargoyle_statue", "y": 180 },
+        "facing=west":  { "model": "eldritch:gargoyle_statue", "y": 270 },
+        "facing=east":  { "model": "eldritch:gargoyle_statue", "y": 90 }
+    }
+}

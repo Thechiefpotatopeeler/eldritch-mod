@@ -2,6 +2,7 @@ package com.eldritchmod.handlers;
 
 import com.eldritchmod.data.IMana;
 
+import com.eldritchmod.data.ManaProvider;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;

@@ -28,8 +28,8 @@ public class ItemsRegistry {
 	public static final ItemBase EuphoriumDust = new ItemBase("euphorium_dust", Main.eldritchmodmaterials);
 	public static final ItemBase SpiderFang = new ItemBase("spider_fang", Main.eldritchmodmaterials);
 	public static final ItemBase SemenBucket = new ItemBase("semen_bucket", Main.eldritchmodmaterials);
+	public static final ItemBase DragonScale = new ItemBase("dragon_scale", Main.eldritchmodmaterials);
 	public static final ItemFoodBase EuphoriumApple = new ItemFoodBase("euphorium_apple", 4,  false);
-
 	public static final ItemFoodBase DriedArcaneMushroom = new ItemFoodBase("dried_arcane_mushroom", 4,  false);
 
 	

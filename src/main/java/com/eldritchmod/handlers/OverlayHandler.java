@@ -2,6 +2,7 @@ package com.eldritchmod.handlers;
 
 import com.eldritchmod.data.IMana;
 
+import com.eldritchmod.data.ManaProvider;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.util.ResourceLocation;

@@ -1,4 +1,4 @@
-package com.eldritchmod.handlers;
+package com.eldritchmod.data;
 
 import com.eldritchmod.data.IMana;
 
