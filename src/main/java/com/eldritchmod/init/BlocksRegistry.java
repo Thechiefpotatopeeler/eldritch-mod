@@ -30,16 +30,13 @@ public class BlocksRegistry {
 
 	public static void registerItemBlocks(final IForgeRegistry<Item> registry) {
 		for (final IRegisterable block : BLOCKS) {
-			switch (block.getName()) {
-				case "log_twilight_yarrow":
-				registry.register(LogTwilightYarrow.createItemBlock());
-				break;
-			default:
+			if(block instanceof BlockLogBase) {
+				registry.register(((BlockLogBase) block).createItemBlock());
+			}
+			else {
 				registry.register(((BlockBase) block).createItemBlock());
-				break;
+			}
 		}
-		}
-		
 	}
 
 	public static void registerModels() {

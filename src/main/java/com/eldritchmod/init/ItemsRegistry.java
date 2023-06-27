@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import com.eldritchmod.Main;
 import com.eldritchmod.items.*;
 
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -14,6 +16,7 @@ public class ItemsRegistry {
 
 	
 	public static final Item.ToolMaterial ELDRITCH_TOOL_MATERIAL = EnumHelper.addToolMaterial("eldritch", 3, 1000, 13, 14, 14);
+	public static final ItemArmor.ArmorMaterial DRAGON_SCALE_ARMOUR_MATERIAL = EnumHelper.addArmorMaterial("dragon_scale", "eldritchmod:dragon_scale", 1000, new int[]{4, 7, 9, 4}, 14, null, 14);
 
 
 	public static final ArrayList<IRegisterable> ITEMS = new ArrayList<IRegisterable>();
@@ -31,6 +34,10 @@ public class ItemsRegistry {
 	public static final ItemBase DragonScale = new ItemBase("dragon_scale", Main.eldritchmodmaterials);
 	public static final ItemFoodBase EuphoriumApple = new ItemFoodBase("euphorium_apple", 4,  false);
 	public static final ItemFoodBase DriedArcaneMushroom = new ItemFoodBase("dried_arcane_mushroom", 4,  false);
+	public static final ItemArmourBase DragonScaleHelmet = new ItemArmourBase("dragon_scale_helmet",DRAGON_SCALE_ARMOUR_MATERIAL , 1, EntityEquipmentSlot.HEAD, Main.eldritchmodtools);
+	public static final ItemArmourBase DragonScaleChestplate = new ItemArmourBase("dragon_scale_chestplate",DRAGON_SCALE_ARMOUR_MATERIAL , 1, EntityEquipmentSlot.CHEST, Main.eldritchmodtools);
+	public static final ItemArmourBase DragonScaleLeggings = new ItemArmourBase("dragon_scale_leggings",DRAGON_SCALE_ARMOUR_MATERIAL , 2, EntityEquipmentSlot.LEGS, Main.eldritchmodtools);
+	public static final ItemArmourBase DragonScaleBoots = new ItemArmourBase("dragon_scale_boots",DRAGON_SCALE_ARMOUR_MATERIAL , 1, EntityEquipmentSlot.FEET, Main.eldritchmodtools);
 
 	
 	public static void register(IForgeRegistry<Item> registry) {		

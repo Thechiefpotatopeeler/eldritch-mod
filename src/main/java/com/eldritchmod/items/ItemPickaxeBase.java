@@ -33,8 +33,4 @@ public class ItemPickaxeBase extends ItemPickaxe implements IRegisterable {
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
-	@Override
-    public String getName() {
-        return this.name;
-    }
 }

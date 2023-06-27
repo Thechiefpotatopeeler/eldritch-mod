@@ -33,8 +33,4 @@ public class ItemShovelBase extends ItemSpade implements IRegisterable {
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
-	@Override
-    public String getName() {
-        return this.name;
-    }
 }

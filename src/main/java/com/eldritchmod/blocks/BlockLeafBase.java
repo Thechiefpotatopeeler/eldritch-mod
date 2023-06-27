@@ -70,8 +70,5 @@ public class BlockLeafBase extends BlockLeaves implements IRegisterable {
 	public EnumType getWoodType(int meta) {
 		return null;
 	}
-	@Override
-    public String getName() {
-        return this.name;
-    }
+
 }

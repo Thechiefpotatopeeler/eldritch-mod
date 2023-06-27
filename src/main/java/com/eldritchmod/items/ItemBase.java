@@ -46,10 +46,6 @@ public class ItemBase extends Item implements IRegisterable, ICreativeTabbable {
 		
 		ItemsRegistry.ITEMS.add(this);
 	}
-	@Override
-    public String getName() {
-        return this.name;
-    }
 
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {

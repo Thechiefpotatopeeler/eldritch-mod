@@ -31,7 +31,6 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
         BlocksRegistry.BLOCKS.add(this);
         this.setHardness(2.0F);
         this.setSoundType(SoundType.WOOD);
-
     }
 
     @Override
@@ -98,8 +97,4 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
                 return this.name;
             }
         }
-    @Override
-    public String getName() {
-        return this.name;
-    }
 }

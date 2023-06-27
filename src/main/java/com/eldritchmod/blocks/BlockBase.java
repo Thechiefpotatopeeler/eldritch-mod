@@ -59,10 +59,6 @@ public class BlockBase extends Block implements IRegisterable {
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Item.getItemFromBlock(this);
 	}
-	@Override
-    public String getName() {
-        return this.name;
-    }
 
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
