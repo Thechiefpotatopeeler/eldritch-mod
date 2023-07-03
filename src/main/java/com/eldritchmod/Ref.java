@@ -26,11 +26,13 @@ public class Ref {
 
     public static final int ENTITY_THUNDERCOCK = 129;
 
+    public static final int BAT_RUBY = 1076;
+
 
 
 
     //Dimension IDs
-    public static final int BACKROOMS = 2;
+    //public static final int BACKROOMS = 2;
 
     //Damage Sources
     public static final DamageSource MESSING_WITH_ARCANE = new DamageSource("messing_with_arcane").setDamageBypassesArmor().setMagicDamage();

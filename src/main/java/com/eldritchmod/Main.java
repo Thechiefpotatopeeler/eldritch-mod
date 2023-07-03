@@ -11,10 +11,7 @@ import com.eldritchmod.handlers.ManaHandler;
 import com.eldritchmod.handlers.OverlayHandler;
 import com.eldritchmod.handlers.PlayerRenderHandler;
 import com.eldritchmod.handlers.CapabilityHandler;
-import com.eldritchmod.init.BlocksRegistry;
-import com.eldritchmod.init.EntitiesRegistry;
-import com.eldritchmod.init.ItemsRegistry;
-import com.eldritchmod.init.PotionRegistry;
+import com.eldritchmod.init.*;
 import com.eldritchmod.proxy.CommonProxy;
 import com.eldritchmod.tabs.*;
 import com.eldritchmod.world.OreGen;
@@ -70,7 +67,7 @@ public class Main {
 		EntityRenderHandler.registerEntityRenders();
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
 		PotionRegistry.registerPotions();
-		//BiomeRegistry.registerBiomes();
+		BiomeRegistry.registerBiomes();
 		//DimensionRegistry.registerDimensions();
 		
 	}

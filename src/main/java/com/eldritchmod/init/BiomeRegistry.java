@@ -1,7 +1,6 @@
 package com.eldritchmod.init;
 
-import com.eldritchmod.world.biome.BiomeBackrooms;
-
+import com.eldritchmod.world.biome.BiomeShroomland;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
@@ -13,11 +12,10 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 public class BiomeRegistry {
 
     //public static final Biome ELDRITCH_FOREST = new BiomeEldritchForest();
-    public static final Biome BACKROOMS = new BiomeBackrooms();
+    public static final Biome SHROOMLAND = new BiomeShroomland();
     
     public static void registerBiomes() {
-        //biomeInit(new BiomeEldritchForest(), "eldritch_forest", BiomeType.WARM, Type.FOREST, Type.HILLS, Type.MAGICAL, Type.DENSE);
-        biomeInit(BACKROOMS, "backrooms", BiomeType.WARM, Type.SPOOKY, Type.DRY);
+        biomeInit(SHROOMLAND, "shroomland", BiomeType.COOL, Type.SPOOKY, Type.WET, Type.MAGICAL);
     }
 
     private static Biome biomeInit(Biome biome, String name, BiomeType biomeType, Type... type){

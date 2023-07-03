@@ -29,6 +29,7 @@ public class ConfigHandler {
     public static int entityHatchableEggID = 127;
     public static int entityGhustID = 128;
     public static int entityThunderCockID = 129;
+    public static int entityBatRubyID = 1076;
 
 
     public static void init(File file) {
