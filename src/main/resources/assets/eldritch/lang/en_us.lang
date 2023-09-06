@@ -33,5 +33,8 @@ entity.dwarf.name=Dwarf
 entity.crocodemon.name=Crocodemon
 entity.thundercock.name=Thundercock
 
-//Biomes (I hope)
-biome.eldritch_forest.name=Eldritch forest
+//General text
+eldritchmod.text.books.guide.title=Grimoire of Arcana
+eldritchmod.text.books.guide.landing=Obscura arcanum
+eldritchmod.text.books.guide.entities.name=Entities
+eldritchmod.text.books.guide.creatures.description=The creatures of the eldritch
