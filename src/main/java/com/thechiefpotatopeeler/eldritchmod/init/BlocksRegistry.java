@@ -13,15 +13,13 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class BlocksRegistry {
 	public static final ArrayList<IRegisterable> BLOCKS = new ArrayList<IRegisterable>();
-	public static final com.thechiefpotatopeeler.eldritchmod.blocks.EldritchBlock EldritchBlock = new EldritchBlock("eldritch_block");
-	public static final com.thechiefpotatopeeler.eldritchmod.blocks.EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
+	public static final Block EldritchBlock = new BlockBase(Material.ROCK,"eldritch_block",Main.eldritchmodmaterials, "pickaxe").setHardness(1.5F).setResistance(10.0F);
+	public static final EuphoriumOre EuphoriumOre = new EuphoriumOre("euphorium_ore");
 	public static final BlockLogBase LogTwilightYarrow = new BlockLogBase("log_twilight_yarrow");
-	public static final com.thechiefpotatopeeler.eldritchmod.blocks.EldritchAltar EldritchAltar = new EldritchAltar("eldritch_altar");
+	public static final EldritchAltar EldritchAltar = new EldritchAltar("eldritch_altar");
 	public static final BlockGargoyleStatue GargoyleStatueBlock = new BlockGargoyleStatue("gargoyle_statue");
 	public static final BlockArcaneMushroom ArcaneMushroom = new BlockArcaneMushroom("arcane_mushroom");
-	public static final BlockBase MAGIC_MYCELIUM = new BlockBase(Material.GROUND,"magic_mycelium", Main.eldritchmodmaterials);
-
-
+	public static final Block MAGIC_MYCELIUM = new BlockBase(Material.GROUND,"magic_mycelium", Main.eldritchmodmaterials,"shovel").setHardness(0.6F).setResistance(0.6F);
 	
 	public static void register(final IForgeRegistry<Block> registry) {
 		for (final IRegisterable block : BLOCKS) {

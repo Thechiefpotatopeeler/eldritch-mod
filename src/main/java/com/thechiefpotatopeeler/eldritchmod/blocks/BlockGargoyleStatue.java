@@ -25,7 +25,7 @@ public class BlockGargoyleStatue extends BlockBase implements ITileEntityProvide
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
     public BlockGargoyleStatue(String name) {
-    super(Material.ROCK,name, CreativeTabs.MISC);
+    super(Material.ROCK,name, CreativeTabs.MISC,"pickaxe");
         setHardness(2.0F);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 public class EuphoriumOre extends BlockBase {
 
     public EuphoriumOre(String name) {
-        super(Material.ROCK, name, Main.eldritchmodmaterials);
+        super(Material.ROCK, name, Main.eldritchmodmaterials, "pickaxe");
         createItemBlock(); 
         this.setHardness(3.0F); 
     }
@@ -24,9 +24,5 @@ public class EuphoriumOre extends BlockBase {
     @Override
     public int getHarvestLevel(IBlockState state) {
         return 3;
-    }
-    @Override
-    public String getHarvestTool(IBlockState state) {
-        return "pickaxe";
     }
 }

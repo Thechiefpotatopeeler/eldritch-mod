@@ -22,7 +22,7 @@ public class BlockArcaneMushroom extends BlockBase implements IGrowable{
 
 
     public BlockArcaneMushroom(String name) {
-        super(Material.PLANTS, name, Main.eldritchmodmaterials);
+        super(Material.PLANTS, name, Main.eldritchmodmaterials,null);
         }
 
     @SideOnly(Side.CLIENT)

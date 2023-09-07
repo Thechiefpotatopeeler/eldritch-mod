@@ -24,15 +24,15 @@ import javax.annotation.Nullable;
 public class BlockBase extends Block implements IRegisterable {
 
 	protected String name;
+	protected String harvestTool;
 	
-	public BlockBase(Material material, String name, @Nullable CreativeTabs tab) {
+	public BlockBase(Material material, String name, @Nullable CreativeTabs tab, @Nullable String harvestTool) {
 		super(material);
 		this.name = name;
-
+		this.harvestTool = harvestTool;
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(tab);
-		
 		BlocksRegistry.BLOCKS.add(this);
 	}
 
@@ -70,5 +70,9 @@ public class BlockBase extends Block implements IRegisterable {
 				tooltip.add(entry.getValue());
 		}
 		//if(Ref.ITEM_BASE_TOOLTIPS.containsKey(this.name)) tooltip.add(Ref.ITEM_BASE_TOOLTIPS.get(stack.getTranslationKey()));
+	}
+	@Override
+	public String getHarvestTool(IBlockState state){
+		return this.harvestTool;
 	}
 }

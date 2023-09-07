@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class EldritchAltar extends BlockBase{
 
     public EldritchAltar(String name) {
-        super(Material.ROCK,name, CreativeTabs.MISC);
+        super(Material.ROCK,name, CreativeTabs.MISC,"pickaxe");
         setHardness(2.0F);
     }
     
