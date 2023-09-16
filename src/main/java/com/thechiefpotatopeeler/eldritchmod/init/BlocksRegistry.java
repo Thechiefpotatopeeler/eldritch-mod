@@ -19,14 +19,14 @@ public class BlocksRegistry {
 	public static final EldritchAltar EldritchAltar = new EldritchAltar("eldritch_altar");
 	public static final BlockGargoyleStatue GargoyleStatueBlock = new BlockGargoyleStatue("gargoyle_statue");
 	public static final BlockArcaneMushroom ArcaneMushroom = new BlockArcaneMushroom("arcane_mushroom");
-	public static final Block MAGIC_MYCELIUM = new BlockBase(Material.GROUND,"magic_mycelium", Main.eldritchmodmaterials,"shovel").setHardness(0.6F).setResistance(0.6F);
+	public static final Block MYCELIC_GRASS = new BlockBase(Material.GROUND,"magic_mycelium", Main.eldritchmodmaterials,"shovel").setHardness(0.6F).setResistance(0.6F);
+	public static final Block MUSHROOM_GILLS = new BlockBase(Material.CLOTH,"mushroom_gills", Main.eldritchmodmaterials,"shovel").setHardness(0.6F).setResistance(0.6F);
 	
 	public static void register(final IForgeRegistry<Block> registry) {
 		for (final IRegisterable block : BLOCKS) {
 			registry.register((Block) block);
 			//System.out.println("Registered block: " + block.getName());
-	}
-		
+		}
 	}
 
 	public static void registerItemBlocks(final IForgeRegistry<Item> registry) {

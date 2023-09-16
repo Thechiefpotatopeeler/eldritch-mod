@@ -16,6 +16,7 @@ tile.euphorium_ore.name=Euphorium ore
 tile.log_twilight_yarrow.name=Twilight yarrow log
 tile.eldritch_altar.name=Eldritch altar
 tile.arcane_mushroom.name=Samwise's special shroom
+tile.magic_mycelium.name=Mycelic grass
 
 //Creative tabs
 itemGroup.eldritchmodtools=Eldritch mod tools
@@ -33,5 +34,8 @@ entity.dwarf.name=Dwarf
 entity.crocodemon.name=Crocodemon
 entity.thundercock.name=Thundercock
 
-//Biomes (I hope)
-biome.eldritch_forest.name=Eldritch forest
+//General text
+eldritchmod.text.books.guide.title=Grimoire of Arcana
+eldritchmod.text.books.guide.landing=Obscura arcanum
+eldritchmod.text.books.guide.entities.name=Entities
+eldritchmod.text.books.guide.creatures.description=The creatures of the eldritch
