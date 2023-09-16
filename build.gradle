@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 version = "1.0"
-group = "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "com.thechiefpotatopeeler.eldritchmod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "modid"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -33,16 +33,11 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
-repositories { 
-    /*maven { 
-        url "https://maven.mcmoddev.com/" 
-    }*/
-} 
-
-dependencies { 
-    //deobfCompile "net.ilexiconn:llibrary:1.7.19-1.12.2"
+repositories {
 }
 
+dependencies {
+}
 processResources {
     // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version

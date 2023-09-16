@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "/"
+    ],
+    "key": {
+    "/": {
+        "item": "minecraft:stick"
+    },
+    "#": {
+        "item": "eldritch:eldritch_tool_ingot"
+    }
+    },
+    "result": {
+        "item": "eldritch:eldritch_sword"
+    }
+}

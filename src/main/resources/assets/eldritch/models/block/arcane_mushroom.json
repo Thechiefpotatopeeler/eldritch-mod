@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "eldritch:blocks/arcane_mushroom"
+  }
+}
