@@ -26,6 +26,7 @@ public class EntitiesRegistry { //This registers the entities, but doesn't actua
         registerEntity("ghust", EntityGhust.class, ConfigHandler.entityGhustID, 30, 0x00FF00, 0x00FF00);
         registerEntity("thundercock", EntityThundercock.class, ConfigHandler.entityThunderCockID, 30, 10592673, 2783956);
         registerEntity("batRuby", EntityBatRuby.class, ConfigHandler.entityBatRubyID, 30, 6097672, 1051417);
+        registerEntity("scarecrow", EntityScarecrow.class, ConfigHandler.entityScarecrowID, 30, 0x00FF00, 0x00FF00);
     } //It seems a bit over the top to have two of them, but it makes things a bit easier to use/read.
 
     private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int c1, int c2) {

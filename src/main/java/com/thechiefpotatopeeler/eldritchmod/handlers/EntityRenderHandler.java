@@ -95,5 +95,12 @@ public class EntityRenderHandler {
                 return new RenderThundercock(manager);
             }
         });
+        RenderingRegistry.registerEntityRenderingHandler(EntityScarecrow.class,new IRenderFactory<EntityScarecrow>(){
+
+            @Override
+            public Render<? super EntityScarecrow> createRenderFor(RenderManager manager) {
+                return new RenderScareCrow(manager);
+            }
+        });
     }
 }   
