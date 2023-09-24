@@ -31,6 +31,8 @@ public class Mana implements IMana {
     }
     private MagicUserTypes magicType = MagicUserTypes.NONE;
     private int mana = 100;
+
+    private int maxMana = 100;
     
     public void consume(int points) {
         this.mana -= points;
@@ -48,7 +50,17 @@ public class Mana implements IMana {
     
     public int getMana() {
         return this.mana;
-    }   
+    }
+
+    @Override
+    public int getMaxMana() {
+        return maxMana;
+    }
+
+    @Override
+    public void setMaxMana(int maxMana) {
+        this.maxMana = maxMana;
+    }
 
 
     public void setMagicType(MagicUserTypes type) {

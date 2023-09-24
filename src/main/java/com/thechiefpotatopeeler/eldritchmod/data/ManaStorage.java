@@ -14,7 +14,7 @@ import net.minecraftforge.common.capabilities.Capability;
 public class ManaStorage implements Capability.IStorage<IMana> {
     @Override
     public NBTBase writeNBT(Capability<IMana> capability, IMana instance, EnumFacing side) {
-        String out = Integer.toString(instance.getMana()) + "," + instance.getMagicType().toString();
+        String out = Integer.toString(instance.getMana()) + "," + instance.getMagicType().toString() + ","+ instance.getMaxMana();
         return new NBTTagString(out);
     }
 
@@ -22,5 +22,6 @@ public class ManaStorage implements Capability.IStorage<IMana> {
     public void readNBT(Capability<IMana> capability, IMana instance, EnumFacing side, NBTBase nbt) {
         instance.set(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[0]));
         instance.setMagicType(MagicUserTypes.valueOf(((NBTTagString)nbt).getString().split(",")[1]));
+        instance.setMaxMana(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[2]));
     }
 }

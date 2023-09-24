@@ -67,7 +67,7 @@ public class Main {
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
 		PotionRegistry.registerPotions();
 		BiomeRegistry.registerBiomes();
-		//DimensionRegistry.registerDimensions();
+		DimensionRegistry.registerDimensions();
 		
 	}
 	

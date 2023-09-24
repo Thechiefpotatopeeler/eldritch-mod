@@ -12,7 +12,8 @@ public interface IMana {
     public void fill(int points);
     public void set(int points);
     public int getMana();
-
+    public int getMaxMana();
+    public void setMaxMana(int maxMana);
     public void setMagicType(MagicUserTypes type);
     public MagicUserTypes getMagicType();
 }

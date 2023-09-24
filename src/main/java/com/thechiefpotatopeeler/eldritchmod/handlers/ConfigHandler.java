@@ -31,6 +31,8 @@ public class ConfigHandler {
     public static int entityThunderCockID = 129;
     public static int entityBatRubyID = 1076;
 
+    public static int dimensionShroomworldID = 2;
+
 
     public static void init(File file) {
         config = new Configuration(file);
@@ -54,6 +56,10 @@ public class ConfigHandler {
         entityHatchableEggID = config.getInt("Hatchable Egg ID", category, 127, MIN_ENTITY_ID, MAX_ENTITY_ID, "Set the ID for the Hatchable Egg entity.");
         entityGhustID = config.getInt("Ghust ID", category, 128, MIN_ENTITY_ID, MAX_ENTITY_ID,"Set the ID for the Ghust entity.");
         entityThunderCockID = config.getInt("Thundercock ID", category, 129, MIN_ENTITY_ID, MAX_ENTITY_ID, "Set the ID for the Thundercock entity.");
+
+        category = "Dimension IDs";
+        config.addCustomCategoryComment(category, "Adjust the dimension IDs for the mod.");
+        dimensionShroomworldID = config.getInt("Shroomworld ID", category, 2, 2, 999, "Set the ID for the Shroomworld dimension.");
 
         config.save();
     }

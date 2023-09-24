@@ -3,6 +3,7 @@ package com.thechiefpotatopeeler.eldritchmod.blocks;
 import java.util.Random;
 
 import com.thechiefpotatopeeler.eldritchmod.Main;
+import com.thechiefpotatopeeler.eldritchmod.handlers.ConfigHandler;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -45,9 +46,9 @@ public class BlockArcaneMushroom extends BlockBase implements IGrowable{
         //worldIn.getChunk(pos).addEntity(new EntitySpiderMatriarch(worldIn));
         for (Entity player : worldIn.getPlayers(Entity.class, (p) -> p.getDistanceSq(pos) < 50 * 50)) {
             player.sendMessage(new TextComponentString("That was a bad idea, thank god this feature is still WIP"));
+            player.changeDimension(ConfigHandler.dimensionShroomworldID);
         }
-            
-        }
+    }
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
