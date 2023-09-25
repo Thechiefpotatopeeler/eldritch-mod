@@ -1,0 +1,11 @@
+{
+  "toadstools_and_roadrules_thomas_jackson": {
+    "category": "music",
+    "sounds": [
+      {
+        "name":"eldritch:music/toadstools_and_roadrules_thomas_jackson",
+        "stream": true
+      }
+    ]
+  }
+}

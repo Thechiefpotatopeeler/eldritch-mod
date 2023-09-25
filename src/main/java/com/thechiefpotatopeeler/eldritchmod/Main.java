@@ -73,7 +73,7 @@ public class Main {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+		SoundRegistry.init();
 	}
 	
 	@EventHandler
@@ -83,6 +83,8 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new OverlayHandler());
 		MinecraftForge.EVENT_BUS.register(new PlayerRenderHandler());
 		MinecraftForge.EVENT_BUS.register(new InGameHandler());
+		MinecraftForge.EVENT_BUS.register(new PotionEffectsHandler());
+		MinecraftForge.EVENT_BUS.register(new MenuHandler());
 	}
 	
 	@EventHandler

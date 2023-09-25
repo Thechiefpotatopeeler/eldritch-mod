@@ -20,8 +20,8 @@ public class EntityCrocodemon extends EntityMob {
     protected void initEntityAI(){
         this.tasks.addTask(1, new EntityAISwimming(this));
         //this.tasks.addTask(3, new EntityAILeapAtTarget(this, 0.4F));
-        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-        this.tasks.addTask(4, new EntityAIAttackMelee(this, 1.0D, true));
+        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+        this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, true));
         targetTasks.addTask(1, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, false));
         targetTasks.addTask(3, new EntityAINearestAttackableTarget<>(this, EntityAnimal.class, false));
         targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityVillager.class, false));
