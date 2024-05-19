@@ -51,6 +51,8 @@ public class ItemsRegistry {
 	public static final ItemArmourBase DragonScaleLeggings = new ItemArmourBase("dragon_scale_leggings",DRAGON_SCALE_ARMOUR_MATERIAL , 2, EntityEquipmentSlot.LEGS, Main.eldritchmodtools);
 	public static final ItemArmourBase DragonScaleBoots = new ItemArmourBase("dragon_scale_boots",DRAGON_SCALE_ARMOUR_MATERIAL , 1, EntityEquipmentSlot.FEET, Main.eldritchmodtools);
 
+	public static final ItemFireStaff FireStaff = new ItemFireStaff("fire_staff", Main.eldritchmodtools);
+
 	
 	public static void register(IForgeRegistry<Item> registry) {		
 		//registry.registerAll(EldritchShard, EldritchToolIngot, EuphoriumDust, SpiderFang, EldritchSword, EldritchPickaxe, EldritchAxe, EldritchShovel, EldritchHoe);

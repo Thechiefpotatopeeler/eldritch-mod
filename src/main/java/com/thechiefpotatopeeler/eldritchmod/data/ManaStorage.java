@@ -20,7 +20,7 @@ public class ManaStorage implements Capability.IStorage<IMana> {
 
     @Override
     public void readNBT(Capability<IMana> capability, IMana instance, EnumFacing side, NBTBase nbt) {
-        instance.set(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[0]));
+        instance.set(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[0]), null);
         instance.setMagicType(MagicUserTypes.valueOf(((NBTTagString)nbt).getString().split(",")[1]));
         instance.setMaxMana(Integer.parseInt(((NBTTagString)nbt).getString().split(",")[2]));
     }

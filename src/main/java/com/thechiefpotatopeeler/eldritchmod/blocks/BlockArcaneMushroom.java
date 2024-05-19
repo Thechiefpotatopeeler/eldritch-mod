@@ -13,6 +13,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.Teleporter;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -46,7 +47,7 @@ public class BlockArcaneMushroom extends BlockBase implements IGrowable{
         //worldIn.getChunk(pos).addEntity(new EntitySpiderMatriarch(worldIn));
         for (Entity player : worldIn.getPlayers(Entity.class, (p) -> p.getDistanceSq(pos) < 50 * 50)) {
             player.sendMessage(new TextComponentString("That was a bad idea, thank god this feature is still WIP"));
-            player.changeDimension(ConfigHandler.dimensionShroomworldID);
+            player.changeDimension(ConfigHandler.dimensionShroomworldID, new Teleporter(worldIn.getMinecraftServer().getWorld(ConfigHandler.dimensionShroomworldID)));
         }
     }
     @Override

@@ -47,7 +47,7 @@ public class ManaHandler {
             EntityPlayer player = event.player;
             IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
             if(mana.getMana() < mana.getMaxMana()){
-                mana.fill(1);
+                mana.fill(1, player);
             }
         }
         counter++;

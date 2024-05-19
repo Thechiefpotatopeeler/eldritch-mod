@@ -1,4 +1,9 @@
 package com.thechiefpotatopeeler.eldritchmod.data;
+
+import com.thechiefpotatopeeler.eldritchmod.handlers.event.EventManaUpdated;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.MinecraftForge;
+
 /**
  * Default implementation of IMana
  */
@@ -34,18 +39,22 @@ public class Mana implements IMana {
 
     private int maxMana = 100;
     
-    public void consume(int points) {
+    public void consume(int points, EntityPlayer player) {
         this.mana -= points;
         
         if (this.mana < 0) this.mana = 0;
+        MinecraftForge.EVENT_BUS.post(new EventManaUpdated(player));
     }
     
-    public void fill(int points) {
+    public void fill(int points, EntityPlayer player) {
         this.mana += points;
+        MinecraftForge.EVENT_BUS.post(new EventManaUpdated(player));
     }
     
-    public void set(int points) {
+    public void set(int points, EntityPlayer player) {
         this.mana = points;
+        System.out.println("Mana set to: " + points);
+        MinecraftForge.EVENT_BUS.post(new EventManaUpdated(player));
     }
     
     public int getMana() {
@@ -70,5 +79,7 @@ public class Mana implements IMana {
     public MagicUserTypes getMagicType() {
         return this.magicType;
     }
+
+
     
 }

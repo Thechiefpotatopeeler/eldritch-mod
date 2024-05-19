@@ -84,19 +84,15 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new PlayerRenderHandler());
 		MinecraftForge.EVENT_BUS.register(new InGameHandler());
 		MinecraftForge.EVENT_BUS.register(new PotionEffectsHandler());
-		MinecraftForge.EVENT_BUS.register(new MenuHandler());
+		MinecraftForge.EVENT_BUS.register(new MusicHandler());
+		MinecraftForge.EVENT_BUS.register(new PacketHandler());
 	}
 	
 	@EventHandler
 	public void serverStarting(FMLServerStartingEvent event) {
 		RegistrationHandler.serverRegistries(event);
 	}
-	
-	/**
-	 * This is something we need to immediately load in our event bus at mod construction time (built)
-	 * @author ezric
-	 *
-	 */
+
 	@EventBusSubscriber
 	public static class RegistrationHandler{
 		
@@ -107,19 +103,9 @@ public class Main {
 		}
 		@SubscribeEvent
 		public static void registerItem(RegistryEvent.Register<Item> event) throws Exception {
-			try {
-				IForgeRegistry<Item> registry = event.getRegistry();
-				ItemsRegistry.register(registry);
-				BlocksRegistry.registerItemBlocks(event.getRegistry());
-			}
-			catch(ArrayIndexOutOfBoundsException ex) {
-				String message = ex.getMessage();
-				throw ex;
-			}
-			catch(Throwable ex) {
-				String message = ex.getMessage();
-				throw ex;
-			}
+			IForgeRegistry<Item> registry = event.getRegistry();
+			ItemsRegistry.register(registry);
+			BlocksRegistry.registerItemBlocks(registry);
 		}
 		
 		@SubscribeEvent
