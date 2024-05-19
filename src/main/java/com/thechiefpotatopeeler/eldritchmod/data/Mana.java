@@ -41,7 +41,6 @@ public class Mana implements IMana {
     
     public void consume(int points, EntityPlayer player) {
         this.mana -= points;
-        
         if (this.mana < 0) this.mana = 0;
         MinecraftForge.EVENT_BUS.post(new EventManaUpdated(player));
     }
@@ -53,7 +52,6 @@ public class Mana implements IMana {
     
     public void set(int points, EntityPlayer player) {
         this.mana = points;
-        System.out.println("Mana set to: " + points);
         MinecraftForge.EVENT_BUS.post(new EventManaUpdated(player));
     }
     

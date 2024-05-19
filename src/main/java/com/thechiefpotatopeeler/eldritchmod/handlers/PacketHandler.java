@@ -52,8 +52,8 @@ public class PacketHandler {
             }
             @Override
             public IMessage onMessage(ManaUpdatedMessage message, MessageContext ctx) {
-                System.out.println("Mana updated to: " + message.mana);
                 Main.proxy.updateManaBar(message.mana);
+                System.out.println("Mana updated to: " + message.mana);
                 return null;
             }
         }
@@ -62,7 +62,7 @@ public class PacketHandler {
     @SubscribeEvent
     public void manaUpdated(EventManaUpdated event) {
         if(event.player.getEntityWorld().isRemote) return;
-        WRAPPER.sendTo(new ManaUpdatedMessage(event.player.getCapability(ManaProvider.MANA_CAP, null).getMana()), event.getMpPlayer());
+        WRAPPER.sendTo(new ManaUpdatedMessage(event.getMpPlayer().getCapability(ManaProvider.MANA_CAP, null).getMana()), event.getMpPlayer());
     }
 
 }

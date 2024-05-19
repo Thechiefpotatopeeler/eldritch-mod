@@ -48,9 +48,6 @@ public class InGameHandler {
 
             player.sendMessage(new TextComponentString("Uh oh, must have been a bull!"));
         }
-        if(event.getTarget() instanceof EntityScarecrow){
-            player.getCapability(ManaProvider.MANA_CAP, null).consume(10, player);
-        }
     }
 
     @SubscribeEvent
