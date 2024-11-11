@@ -33,8 +33,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 @Mod(modid= Main.MOD_ID, version = Main.VERSION, name = Main.NAME, dependencies = "required-after:llibrary@[1.7.19,)" /*, updateJSON = Main.updateJSON)*/ )
 public class Main {
 	public static final String MOD_ID = "eldritch";
@@ -43,8 +42,7 @@ public class Main {
 	public static File config;
 	//public static final String updateJSON = "";
 
-	public static Logger logger = LogManager.getLogger(NAME);
-	
+
 	@Instance
 	public static Main instance;
 	
@@ -99,7 +97,6 @@ public class Main {
 		@SubscribeEvent
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
 			BlocksRegistry.register(event.getRegistry());
-		
 		}
 		@SubscribeEvent
 		public static void registerItem(RegistryEvent.Register<Item> event) throws Exception {
