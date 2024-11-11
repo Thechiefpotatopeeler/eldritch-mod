@@ -3,7 +3,9 @@ package com.thechiefpotatopeeler.eldritchmod.entity.entity;
 import com.thechiefpotatopeeler.eldritchmod.entity.ai.EntityAIAttackThunder;
 import com.thechiefpotatopeeler.eldritchmod.entity.ai.EntityAICauseStorm;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIFollow;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,6 +28,7 @@ public class EntityThundercock extends EntityBossBase {
         this.tasks.addTask(1, new EntityAICauseStorm(this));
         this.tasks.addTask(2, new EntityAIAttackThunder(this));
         this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, (float)this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).getAttributeValue()));
+        this.tasks.addTask(2, new EntityAISwimming(this));
         this.targetTasks.addTask(1, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, false));
     }
 
