@@ -31,6 +31,9 @@ public class ConfigHandler {
     public static int entityThunderCockID = 129;
     public static int entityBatRubyID = 1076;
     public static int entityScarecrowID = 130;
+    public static int entityShroomoidTraderID = 131;
+    public static int entityGoatmanID =132;
+
 
 
     public static int dimensionShroomworldID = 2;
