@@ -15,8 +15,15 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.util.ArrayList;
+
 @EventBusSubscriber
 public class ManaHandler {
+
+    private final ArrayList<PlayerManaTracker> manaTrackers;
+    public ManaHandler() {
+        manaTrackers = new ArrayList<PlayerManaTracker>();
+    }
     @SubscribeEvent
     public void onPlayerLogsIn(PlayerLoggedInEvent event) {
         EntityPlayer player = event.player.getServer().getPlayerList().getPlayerByUUID(event.player.getUniqueID());
@@ -36,19 +43,18 @@ public class ManaHandler {
     }
 
     @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END && event.side.isServer()) {
-            EntityPlayer player = event.player;
-            IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
-            if (mana.getMana() < mana.getMaxMana()) {
-                mana.fill(1, player);
-            }
+    public void onPlayerTick(TickEvent event) {
+        if (event.phase != TickEvent.Phase.END || !(event instanceof TickEvent.PlayerTickEvent)) {
+            return;
         }
+        manaTrackers.forEach(PlayerManaTracker::regenMana);
     }
 
     private void playerEventCaps(EntityPlayer player){
-        if(!ConfigHandler.enableMana) return;
-        //This code will run whenever a player logs in, then set and tell them their current mana level.
+        if(player.world.isRemote || !ConfigHandler.enableMana) return;
+
+        updateManaTracker(player);
+
         IMana mana = player.getCapability(ManaProvider.MANA_CAP, null);
         switch (mana.getMagicType()) {
             case ELDRITCH_SORCERER:
@@ -64,5 +70,15 @@ public class ManaHandler {
                 break;
         }
         player.sendMessage(new TextComponentString("Your mana is: " + mana.getMana() + " and your magic type is: " + mana.getMagicType()));
+    }
+
+    public void updateManaTracker(EntityPlayer player) {
+        if (player.world.isRemote || !ConfigHandler.enableMana) {
+            return;
+        }
+
+        if (manaTrackers.stream().noneMatch(tracker -> tracker.getPlayer().getUniqueID().equals(player.getUniqueID()))) {
+            manaTrackers.add(new PlayerManaTracker(player));
+        }
     }
 }

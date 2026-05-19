@@ -17,4 +17,8 @@ public interface IMana {
     public void setMaxMana(int maxMana);
     public void setMagicType(MagicUserTypes type);
     public MagicUserTypes getMagicType();
+
+    default boolean canRegen(){
+        return getMana() < getMaxMana();
+    }
 }

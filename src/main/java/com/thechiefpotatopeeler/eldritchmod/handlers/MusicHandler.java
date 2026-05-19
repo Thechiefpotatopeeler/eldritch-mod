@@ -10,7 +10,6 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 public class MusicHandler {
     @SubscribeEvent
     public void onPlayerJoins(PlayerEvent.PlayerChangedDimensionEvent event) {
-        if (event.player.dimension == ConfigHandler.dimensionShroomworldID) Minecraft.getMinecraft().player.playSound(SoundRegistry.MUSHROOM_DIMENSION_MUSIC, 1.0F, 1.0F);
-
+        if (event.player.dimension == 0) Minecraft.getMinecraft().player.playSound(SoundRegistry.MUSHROOM_DIMENSION_MUSIC, 1.0F, 1.0F);
     }
 }

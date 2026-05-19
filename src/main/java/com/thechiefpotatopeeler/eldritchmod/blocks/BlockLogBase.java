@@ -6,6 +6,7 @@ import com.thechiefpotatopeeler.eldritchmod.Main;
 import com.thechiefpotatopeeler.eldritchmod.init.BlocksRegistry;
 import com.thechiefpotatopeeler.eldritchmod.items.IRegisterable;
 
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -17,20 +18,17 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 
-public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
-    
-    public static final PropertyEnum<BlockLogBase.EnumAxis> LOG_AXIS = PropertyEnum.<BlockLogBase.EnumAxis>create("axis", BlockLogBase.EnumAxis.class);
+public class BlockLogBase extends BlockLog implements IRegisterable {
 
     protected String name;
 
     public BlockLogBase(String name) {
-        super(Material.WOOD);
+        super();
         this.name = name;
         setTranslationKey(name);
 		setRegistryName(name);
         BlocksRegistry.BLOCKS.add(this);
-        this.setHardness(2.0F);
-        this.setSoundType(SoundType.WOOD);
+        this.setCreativeTab(Main.eldritchmodmaterials);
     }
 
     @Override
@@ -58,43 +56,4 @@ public class BlockLogBase extends BlockRotatedPillar implements IRegisterable {
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Item.getItemFromBlock(this);
     }
-    public static enum EnumAxis implements IStringSerializable
-        {
-            X("x"),
-            Y("y"),
-            Z("z"),
-            NONE("none");
-    
-            private final String name;
-    
-            private EnumAxis(String name)
-            {
-                this.name = name;
-            }
-    
-            public String toString()
-            {
-                return this.name;
-            }
-    
-            public static BlockLogBase.EnumAxis fromFacingAxis(EnumFacing.Axis axis)
-            {
-                switch (axis)
-                {
-                    case X:
-                        return X;
-                    case Y:
-                        return Y;
-                    case Z:
-                        return Z;
-                    default:
-                        return NONE;
-                }
-            }
-    
-            public String getName()
-            {
-                return this.name;
-            }
-        }
 }
